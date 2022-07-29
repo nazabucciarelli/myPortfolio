@@ -9,7 +9,7 @@ header{
 }
 
 nav{
-    background: linear-gradient(to bottom right, rgb(33, 122, 255), rgb(226, 122, 140));
+    background: linear-gradient(to bottom right, rgb(33, 122, 255), rgb(90, 83, 84));
     box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.671);
    
 }
@@ -68,6 +68,54 @@ div .socials{
 }
 
 #position{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2.2vh;
+}
+
+.info-section {
+    background-color: rgba(66, 68, 68, 0.062);
+    margin-top:2vh;
+}
+
+.about .container{
+    padding:5vh;
+}
+
+.about p{
+    font-style: italic;
+}
+
+.info-section  img{
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+.info-section .img{
+    display: block;
+    margin: auto;
+}
+
+.info-section .container{
+    padding: 4vh;
+}
+
+.info-section .row{
+    padding: 0.4vh;
+    border:1px solid rgba(136, 136, 136, 0.411);
+    border-radius: 3vh;
+    transition: 0.4s;
+}
+.info-section .row:hover{
+    box-shadow:  1px 5px 5px rgba(109, 108, 108, 0.671);
+}
+
+.title-section{
+    text-align: center;
+    padding: 2vh;
+}
+
+.period{
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
 }
