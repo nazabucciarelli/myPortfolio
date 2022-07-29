@@ -7,14 +7,30 @@ nav{
 nav .btn-light{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    color: rgb(58, 58, 57);
 }
 
-div ol i{
+.logo{
+    transition: 0.7s;
+    opacity: 0.6;
+}
+
+.logo:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+div .socials i{
     padding: 5px;
     color: rgb(230, 222, 222);
     font-size: 20px;
 }
 
-div ol{
+div .socials i:hover{
+    color: rgba(230, 222, 222, 0.678);
+    cursor: pointer;
+}
+
+div .socials{
     margin: 30px;
 }
