@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+nav{
+    background: linear-gradient(to bottom right, rgb(33, 122, 255), rgb(226, 122, 140));
+}
+
+nav .btn-light{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+div ol i{
+    padding: 5px;
+    color: rgb(230, 222, 222);
+    font-size: 20px;
+}
+
+div ol{
+    margin: 30px;
+}
