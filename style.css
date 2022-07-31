@@ -64,10 +64,6 @@ div .socials{
     box-shadow:  1px 20px 30px rgba(0, 0, 0, 0.671);
 }
 
-.navigation{
-    align-items: center;
-    padding:3vh;
-}
 
 
 .profilepic {
@@ -87,7 +83,7 @@ div .socials{
 }
 
 .info-section {
-    background-color: rgba(66, 68, 68, 0.062);
+    
     margin-top:2vh;
 }
 
@@ -122,7 +118,7 @@ div .socials{
 
 .title-section{
     text-align: center;
-    padding: 3vh;
+    padding: 2vh;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
 }
@@ -133,7 +129,7 @@ div .socials{
 }
 
 .section{
-    background-color: rgba(66, 68, 68, 0.062);
+    
     border-radius: 5vh;
     margin: 10px;
     text-align: center;
@@ -143,6 +139,7 @@ div .socials{
 footer{
     background: linear-gradient(to bottom right, rgb(90, 83, 84),rgb(33, 122, 255) );
     height: 30vh;
+    margin-top:5vh;
 }
 
 footer p{
@@ -186,3 +183,29 @@ footer p{
     text-align: start;
     font-family: 'Roboto', sans-serif;
 }
+
+.icons-edit{
+    text-align: end;
+}
+
+.icons-edit a{
+    color: rgb(101, 105, 109);
+}
+
+.item-progress{
+    padding: 10px;
+}
+
+.progress{
+    box-shadow:  1px 0.4px 4px rgba(0, 0, 0, 0.671);
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {}
+/* Small devices (portrait tablets and large phones, 481px and 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {}
+/* Medium devices (landscape tablets, 768px and 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px){}
+
+/* Largue devices ( landscape desktop, 1025px and 1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {}
