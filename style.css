@@ -21,11 +21,13 @@ nav .btn-light{
 
 .navbar{
     padding:5px;
+    margin: 0;
 }
 
 
 .logo{
     transition: 0.7s;
+    width:100%;
 }
 
 .logo:hover {
@@ -45,8 +47,10 @@ div .socials i:hover{
 }
 
 div .socials{
-    margin: 30px;
+   margin: auto;
+   margin-right: 20px;
 }
+
 
 .banner{
     background-image: url(img/banner.jpg);
@@ -57,7 +61,7 @@ div .socials{
     background-color: rgba(0, 0, 0, 0.30);
     background-blend-mode: darken;
     height:70vh;
-    box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.671);
+    box-shadow:  1px 20px 30px rgba(0, 0, 0, 0.671);
 }
 
 .navigation{
@@ -94,13 +98,12 @@ div .socials{
 
 .info-section  img{
     width: 60%;
-    display: block;
-    margin: auto;
 }
 
 .info-section .img{
-    display: block;
-    margin: auto;
+    display: flex;
+    margin: auto ;
+    justify-content: center;
 }
 
 .info-section .container{
@@ -156,4 +159,30 @@ footer p{
 .carousel-control-next,
 .carousel-control-prev {
     filter: invert(100%);
+}
+
+#scroll{
+    height: 400px;
+	border: 1px solid #ddd;
+	background: #f1f1f1;
+	overflow-y: scroll;
+    overflow-x:hidden;
+    margin-bottom: 50px;
+}
+
+
+.cont-img{
+   align-items: center;
+   display: flex;
+}
+
+.card{
+    padding: 1vh;
+    margin-top:10px;
+}
+
+.card-text{
+    font-size: 1.6vh;
+    text-align: start;
+    font-family: 'Roboto', sans-serif;
 }
