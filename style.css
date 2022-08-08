@@ -4,6 +4,11 @@ html {
     scroll-behavior:smooth;
   }
 
+.noscroll{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 header{
     font-family: 'Roboto', sans-serif;
 }
@@ -185,17 +190,26 @@ footer p{
 
 #modal{
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     max-width: 40ch;
 }
 
 .form-group{
     width: 100%;
-    padding: 10px;
+    padding: 18px;
 }
+
+
+.form-group label {
+    color: rgb(63, 63, 63);
+}
+
 
 .form-input{
     width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 .btn-container{
