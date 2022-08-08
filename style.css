@@ -82,7 +82,10 @@ div .socials{
 .info-profile{
     padding: 3vh;
 }
-
+.info-profile a i{
+    font-size: 20px;
+    color: #858585;
+}
 #position{
     font-weight: 400;
     font-size: 2.2vh;
@@ -102,6 +105,11 @@ div .socials{
     width: 60%;
 }
 
+.delete-card{
+    padding: 10px;
+    color: #858585;
+}
+
 .info-section .img{
     display: flex;
     margin: auto ;
@@ -113,7 +121,8 @@ div .socials{
 }
 
 .info-section .row{
-    padding: 0.4vh;
+    padding: 1vh;
+    margin: 20px;
     border:1px solid rgba(136, 136, 136, 0.411);
     border-radius: 3vh;
     transition: 0.4s;
@@ -121,6 +130,8 @@ div .socials{
 .info-section .row:hover{
     box-shadow:  1px 5px 5px rgba(109, 108, 108, 0.671);
 }
+
+
 
 .title-section{
     text-align: center;
@@ -257,10 +268,45 @@ footer p{
     box-shadow:  1px 0.4px 4px rgba(0, 0, 0, 0.671);
 }
 
+.header h4, a{
+    display: inline;
+}
+
+.header h2{
+    display: inline;
+}
+
+.header a{
+    font-size:20px;
+    float: right;
+}
+
+.header{
+    padding:10px;
+}
+
+.header a i{
+    color: #858585;
+}
+
 /* Extra small devices (phones, 480px and down) */
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+    h5 {
+        font-size: 14px;
+    }
+
+    .work-description{
+        font-size: 13px;
+    }
+}
 /* Small devices (portrait tablets and large phones, 481px and 768px) */
-@media only screen and (min-width: 481px) and (max-width: 768px) {}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+    .logo{display: none;}
+    .info-profile{
+        text-align: center;
+    }
+  
+}
 /* Medium devices (landscape tablets, 768px and 1024px) */
 @media only screen and (min-width: 768px) and (max-width: 1024px){}
 
