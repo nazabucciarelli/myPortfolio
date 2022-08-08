@@ -27,7 +27,8 @@ nav .btn-light{
 
 .logo{
     transition: 0.7s;
-    width:100%;
+    width:150px;
+    margin: 0 auto;
 }
 
 .logo:hover {
@@ -178,6 +179,48 @@ footer p{
     margin-top:10px;
 }
 
+#modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.521);
+}
+
+#modal{
+    border: none;
+    border-radius: 20px;
+    max-width: 40ch;
+}
+
+.form-group{
+    width: 100%;
+    padding: 10px;
+}
+
+.form-input{
+    width: 100%;
+}
+
+.btn-container{
+   text-align: center;
+}
+
+#login-title{
+    font-size: 22px;
+  
+}
+
+#login-description{
+    font-size: 0.8em;
+    color: rgb(97, 97, 97);
+}
+
+.form-header h2, button{
+    display: inline;
+}
+
+#btn-login-close{
+    background-color: #ffffff;
+    border:none;
+}
+
 .card-text{
     font-size: 1.6vh;
     text-align: start;
@@ -193,7 +236,7 @@ footer p{
 }
 
 .item-progress{
-    padding: 10px;
+    padding: 20px;
 }
 
 .progress{
