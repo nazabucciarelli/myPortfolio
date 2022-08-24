@@ -5,11 +5,8 @@ const body = document.getElementById("body");
 
 btnOpen.addEventListener("click",()=>{
     modal.showModal();
-    body.classList.add("noscroll");
 })
 
 btnClose.addEventListener("click",()=>{
     modal.close();
-    body.classList.remove("noscroll");
 })
-
