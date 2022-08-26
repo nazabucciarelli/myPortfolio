@@ -78,5 +78,51 @@
         "description" : "Una simple aplicación de escritorio hecha con Java, que te muestra en pantalla un personaje random de League of Legends que tendrás que jugar. Se utilizó Swing para la interfaz.",
         "imgurl" : "https://i.postimg.cc/brcm60WB/project6.png",
         "githublink" : "github.com"
-    }]
+    }],
+    "frontendskills":[
+        {
+            "title" : "HTML",
+            "iconclass" : "fa fa-html5",
+            "progress" : "35%"
+        }, 
+        {
+            "title" : "CSS",
+            "iconclass" : "fab fa-css3-alt",
+            "progress" : "30%"
+        },
+        {
+            "title" : "JavaScript",
+            "iconclass" : "fab fa-js",
+            "progress" : "20%"
+        }
+    ],
+    "backendskills":[
+        {
+            "title" : "Python",
+            "iconclass" : "fab fa-python",
+            "progress" : "20%"
+        },
+        {
+            "title" : "Java",
+            "iconclass" : "fab fa-java",
+            "progress" : "20%"
+        }
+    ],
+    "communicationskills": [
+        {
+            "title" : "Comunicación",
+            "iconclass" : "fa fa-comment",
+            "progress" : "10%"
+        },
+        {
+            "title" : "Responsabilidad",
+            "iconclass" : "fa fa-thumbs-up",
+            "progress" : "5%"
+        },
+        {
+            "title" : "Autodidacta",
+            "iconclass" : "fa fa-book",
+            "progress" : "2%"
+        }
+    ]
 }

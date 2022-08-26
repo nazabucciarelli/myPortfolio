@@ -8,10 +8,10 @@
                 <a href=""><i class="fa fa-plus"></i></a>
             </div>
             
-            <div class="item-progress">
+            <div class="item-progress" *ngFor="let skill of frontendSkillsData">
                 <div class="row">
                     <div class="col">
-                        <h5><i class="fa fa-html5"></i> HTML</h5>
+                        <h5><i [class]="skill.iconclass"></i> {{skill.title}}</h5>
                     </div>
                     <div class="col icons-edit">    
                             <a href=""><i class="fa fa-pen"></i></a>
@@ -19,48 +19,19 @@
                     </div>
                 </div>
                   <div class="progress">  
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-            </div>
-            <div class="item-progress">
-                <div class="row">
-                    <div class="col">
-                        <h5><i class="fab fa-css3-alt"></i> CSS</h5>
-                    </div>
-                    <div class="col icons-edit">    
-                            <a href=""><i class="fa fa-pen"></i></a>
-                            <a href=""><i class="fa fa-trash"></i></a>
-                    </div>
+                    <div class="progress-bar bg-success" role="progressbar" [ngStyle]="{'width':skill.progress}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                  <div class="progress">  
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-            </div>
-            <div class="item-progress">
-                <div class="row">
-                    <div class="col">
-                        <h5><i class="fab fa-js"></i> JavaScript</h5>
-                    </div>
-                    <div class="col icons-edit">    
-                            <a href=""><i class="fa fa-pen"></i></a>
-                            <a href=""><i class="fa fa-trash"></i></a>
-                    </div>
-                </div>
-                  <div class="progress">  
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-            </div>
-            
+            </div>           
         </div>
         <div class="col-lg-4 col-sm-12">
             <div class="container header">
                 <h4>Back-End</h4> 
                 <a href=""><i class="fa fa-plus"></i></a>
             </div>
-            <div class="item-progress">
+            <div class="item-progress" *ngFor="let skill of backendSkillsData">
                 <div class="row">
                     <div class="col">
-                        <h5><i class="fab fa-python"></i> Python</h5>
+                        <h5><i [class]="skill.iconclass"></i> {{skill.title}}</h5>
                     </div>
                     <div class="col icons-edit">    
                             <a href=""><i class="fa fa-pen"></i></a>
@@ -68,35 +39,19 @@
                     </div>
                 </div>
                   <div class="progress">  
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" [ngStyle]="{'width':skill.progress}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-            </div>
-            <div class="item-progress">
-                <div class="row">
-                    <div class="col">
-                        <h5><i class="fab fa-java"></i> Java</h5>
-                    </div>
-                    <div class="col icons-edit">    
-                            <a href=""><i class="fa fa-pen"></i></a>
-                            <a href=""><i class="fa fa-trash"></i></a>
-                    </div>
-                </div>
-                  <div class="progress">  
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-            </div>
-
-            
+            </div>     
         </div>
         <div class="col-lg-4 col-sm-12">
             <div class="container header">
                 <h4>Soft skills</h4> 
                 <a href=""><i class="fa fa-plus"></i></a>
             </div>
-            <div class="item-progress">
+            <div class="item-progress" *ngFor="let skill of communicationSkillsData">
                 <div class="row">
                     <div class="col">
-                        <h5><i class="fa fa-comment"></i> Comunicación</h5>
+                        <h5><i [class]="skill.iconclass"></i> {{skill.title}}</h5>
                     </div>
                     <div class="col icons-edit">    
                             <a href=""><i class="fa fa-pen"></i></a>
@@ -104,38 +59,9 @@
                     </div>
                 </div>
                   <div class="progress">  
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg" role="progressbar" [ngStyle]="{'width':skill.progress}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
             </div>
-            <div class="item-progress">
-                <div class="row">
-                    <div class="col">
-                        <h5><i class="fa fa-thumbs-up"></i> Responsabilidad</h5>
-                    </div>
-                    <div class="col icons-edit">    
-                            <a href=""><i class="fa fa-pen"></i></a>
-                            <a href=""><i class="fa fa-trash"></i></a>
-                    </div>
-                </div>
-                  <div class="progress">  
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-            </div>
-            <div class="item-progress">
-                <div class="row">
-                    <div class="col">
-                        <h5><i class="fa fa-book"></i> Autodidacta</h5>
-                    </div>
-                    <div class="col icons-edit">    
-                            <a href=""><i class="fa fa-pen"></i></a>
-                            <a href=""><i class="fa fa-trash"></i></a>
-                    </div>
-                </div>
-                  <div class="progress">  
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-            </div>
-          
         </div>
     </div>
 </div>
