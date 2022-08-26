@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
   selector: 'app-experience',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-
-  constructor() { }
+  experienceData: any;
+  constructor(private datos:PortfolioService) { }
 
   ngOnInit(): void {
+    this.datos.obtenerDatos().subscribe(data => {
+      console.log(data)
+      this.experienceData = data
+    })
   }
 
 }
