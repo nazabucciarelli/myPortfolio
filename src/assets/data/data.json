@@ -12,6 +12,9 @@
         },
         {
             "imgurl" : "https://i.postimg.cc/k5GYDgWf/cert3.jpg"
+        },
+        {
+            "imgurl" : "https://i.postimg.cc/150jjT9c/cert4.png"
         }
     ],
     "experience" :[{
@@ -38,5 +41,42 @@
         "period" : "2022-2025",
         "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque delectus unde? Repellendus ducimus deserunt libero commodi amet nobis enim maxime sequi aliquid possimus aspernatur similique, eius excepturi recusandae magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem libero nemo cumque in accusamus ipsam dolorum, eius nulla aperiam dignissimos quia saepe voluptatum nisi et fuga facilis quisquam ullam blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi nesciunt placeat doloremque quos deserunt eius, quaerat mollitia repudiandae libero facilis saepe at. Itaque modi nobis atque blanditiis illum perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing elit",
         "imgurl" : "https://i.postimg.cc/tCGcDyH4/itec.png"
+    }],
+    "projects" : [{
+        "title" : "PROYECTAR",
+        "date" : "30 May 2021",
+        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
+        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "githublink" : "github.com"
+    },{
+        "title" : "PROYECTAR",
+        "date" : "30 May 2021",
+        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
+        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "githublink" : "github.com"
+    },{
+        "title" : "PROYECTAR",
+        "date" : "30 May 2021",
+        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
+        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "githublink" : "github.com"
+    },{
+        "title" : "PROYECTAR",
+        "date" : "30 May 2021",
+        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
+        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "githublink" : "github.com"
+    },{
+        "title" : "PROYECTAR",
+        "date" : "30 May 2021",
+        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
+        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "githublink" : "github.com"
+    },{
+        "title" : "PROYECTAR",
+        "date" : "30 May 2021",
+        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
+        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "githublink" : "github.com"
     }]
 }
