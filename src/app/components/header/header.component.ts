@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 
 
 @Component({
@@ -7,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../../../styles.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  socialsData:any;
+  constructor(private datos:PortfolioService) { }
 
   ngOnInit(): void {
-    
+    this.datos.obtenerDatos().subscribe(data => {
+      this.socialsData = data
+    })
+  }
+
+  showModal(){
+    console.log("MODAL FUNCIONA");
   }
 
 }

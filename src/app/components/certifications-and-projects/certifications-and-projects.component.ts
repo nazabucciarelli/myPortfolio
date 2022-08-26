@@ -13,7 +13,6 @@ export class CertificationsAndProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.datos.obtenerDatos().subscribe(data => {
-      console.log(data)
       this.certificationsData = data.certifications;
       this.projectsData = data.projects
     })
