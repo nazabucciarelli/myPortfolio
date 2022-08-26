@@ -224,8 +224,12 @@ footer p{
 }
 
 .btn-container{
-   text-align: center;
+   display: flex;
+   align-items:center;
+   justify-content: center;
+   
 }
+
 
 #login-title{
     font-size: 22px;
