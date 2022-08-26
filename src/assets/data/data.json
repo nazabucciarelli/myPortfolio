@@ -1,12 +1,42 @@
 {
     "name" : "Nazareno Bucciarelli",
+    "profilepic" : "https://i.postimg.cc/dV4SqyZh/profilepic.png",
     "position" : "Full Stack Developer Jr.",
     "about" : "Me encuentro realizando el primer año de una carrera técnica de desarrollo de software. Tengo 19 años, llevo un año aprendiendo en el mundo de la programación y es algo que considero apasionante y dinámico. Estoy interesado en conseguir mi primer experiencia laboral en el campo desenvolviéndome como Jr. He realizado proyectos en Java, Python y sitios web con HTML, CSS Y JavaScript. Estoy en la segunda etapa del programa 'Argentina Programa', de la cual me certifico con el titulo de 'Desarrollador Web Full-Stack Jr.', aproximadamente en Enero del año siguiente ya lo estaré finalizando. De mi persona puedo destacar mis buenas habilidades comunicativas, responsabilidad, respeto, empatía y la disposición a estar constantemente mejorando, ya sea laboralmente o como persona.",
-    "experience" :{
+    "certifications": [
+        {
+            "imgurl" : "https://i.postimg.cc/449Mzyq0/cert1.png"
+        },
+        {
+            "imgurl" : "https://i.postimg.cc/YCpsK30c/cert2.jpg"
+        },
+        {
+            "imgurl" : "https://i.postimg.cc/k5GYDgWf/cert3.jpg"
+        }
+    ],
+    "experience" :[{
         "position" : "Software Engineer",
         "period" : "2010-2020",
         "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque delectus unde? Repellendus ducimus deserunt libero commodi amet nobis enim maxime sequi aliquid possimus aspernatur similique, eius excepturi recusandae magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem libero nemo cumque in accusamus ipsam dolorum, eius nulla aperiam dignissimos quia saepe voluptatum nisi et fuga facilis quisquam ullam blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi nesciunt placeat doloremque quos deserunt eius, quaerat mollitia repudiandae libero facilis saepe at. Itaque modi nobis atque blanditiis illum perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing elit",
-        "imgurl" : "https://pngimg.com/uploads/microsoft/microsoft_PNG9.png"
+        "imgurl" : "https://i.postimg.cc/brx34DjN/work1.png"
+    },
+    {
+        "position" : "Software Engineer",
+        "period" : "2010-2020",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque delectus unde? Repellendus ducimus deserunt libero commodi amet nobis enim maxime sequi aliquid possimus aspernatur similique, eius excepturi recusandae magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem libero nemo cumque in accusamus ipsam dolorum, eius nulla aperiam dignissimos quia saepe voluptatum nisi et fuga facilis quisquam ullam blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi nesciunt placeat doloremque quos deserunt eius, quaerat mollitia repudiandae libero facilis saepe at. Itaque modi nobis atque blanditiis illum perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        "imgurl" : "https://i.postimg.cc/brx34DjN/work1.png"
     }
-
+],
+    "education" : [{
+        "title" : "Desarrollador de Software",
+        "period" : "2022-2025",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque delectus unde? Repellendus ducimus deserunt libero commodi amet nobis enim maxime sequi aliquid possimus aspernatur similique, eius excepturi recusandae magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem libero nemo cumque in accusamus ipsam dolorum, eius nulla aperiam dignissimos quia saepe voluptatum nisi et fuga facilis quisquam ullam blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi nesciunt placeat doloremque quos deserunt eius, quaerat mollitia repudiandae libero facilis saepe at. Itaque modi nobis atque blanditiis illum perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        "imgurl" : "https://i.postimg.cc/tCGcDyH4/itec.png"
+    },
+    {
+        "title" : "Desarrollador de Software",
+        "period" : "2022-2025",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque delectus unde? Repellendus ducimus deserunt libero commodi amet nobis enim maxime sequi aliquid possimus aspernatur similique, eius excepturi recusandae magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem libero nemo cumque in accusamus ipsam dolorum, eius nulla aperiam dignissimos quia saepe voluptatum nisi et fuga facilis quisquam ullam blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi nesciunt placeat doloremque quos deserunt eius, quaerat mollitia repudiandae libero facilis saepe at. Itaque modi nobis atque blanditiis illum perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        "imgurl" : "https://i.postimg.cc/tCGcDyH4/itec.png"
+    }]
 }

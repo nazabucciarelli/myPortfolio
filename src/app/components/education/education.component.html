@@ -3,14 +3,14 @@
         <h2 class="title-section header">Educacion <a><i class="fa fa-plus"></i></a></h2>
         
 
-        <div class="row">
+        <div class="row" *ngFor="let estudio of educationData">
             <div class="col-sm-12 col-lg-2 img">
-                <img src="../assets/itec.png">
+                <img [src]="estudio.imgurl">
             </div>
             <div class="col">
-                <h4>Desarrollo de software <a><i class="fa fa-trash rounded float-end delete-card"></i></a></h4>
-                <p class="period">2022-2025</p>
-                <p class="work-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque delectus unde? Repellendus ducimus deserunt libero commodi amet nobis enim maxime sequi aliquid possimus aspernatur similique, eius excepturi recusandae magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem libero nemo cumque in accusamus ipsam dolorum, eius nulla aperiam dignissimos quia saepe voluptatum nisi et fuga facilis quisquam ullam blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi nesciunt placeat doloremque quos deserunt eius, quaerat mollitia repudiandae libero facilis saepe at. Itaque modi nobis atque blanditiis illum perspiciatis! Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                <h4>{{estudio.title}}<a><i class="fa fa-trash rounded float-end delete-card"></i></a></h4>
+                <p class="period">{{estudio.period}}</p>
+                <p class="work-description">{{estudio.description}}</p>
             </div>
         </div>
     </div>
