@@ -49,34 +49,34 @@
         "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
         "githublink" : "github.com"
     },{
-        "title" : "PROYECTAR",
-        "date" : "30 May 2021",
-        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
-        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "title" : "GoLabs",
+        "date" : "24 May 2021",
+        "description" : "Pagina web realizada con HTML y CSS. Diseño adaptable.",
+        "imgurl" : "https://i.postimg.cc/HkZBG1F5/project2.png",
         "githublink" : "github.com"
     },{
-        "title" : "PROYECTAR",
-        "date" : "30 May 2021",
-        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
-        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "title" : "BucciarelliWebDev",
+        "date" : "1 Abr 2022",
+        "description" : "Pagina web de mi marca personal, fue realizada con el fin de ejercitar tecnologías de frontend. Realizada con HTML, CSS y JavaScript. Diseño adaptable.",
+        "imgurl" : "https://i.postimg.cc/25gG6FkS/project3.png",
         "githublink" : "github.com"
     },{
-        "title" : "PROYECTAR",
-        "date" : "30 May 2021",
-        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
-        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "title" : "Nintendo Web",
+        "date" : "18 Ene 2022",
+        "description" : "Pagina web realizada con HTML y CSS para un curso de JAA (Junior Achievement Argentina) + Microsoft",
+        "imgurl" : "https://i.postimg.cc/nLXTpwtW/project4.png",
         "githublink" : "github.com"
     },{
-        "title" : "PROYECTAR",
-        "date" : "30 May 2021",
-        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
-        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "title" : "Parqueadero-Soft",
+        "date" : "3 Abr 2022",
+        "description" : "Parqueadero-Soft es una aplicación de escritorio hecha con Java y conectada a una base de datos MySQL, es funcional para estacionamientos. Consiste en una interfaz de usuario principal que contiene 4 botones para navegar.",
+        "imgurl" : "https://i.postimg.cc/bYkCZM2c/project5.png",
         "githublink" : "github.com"
     },{
-        "title" : "PROYECTAR",
-        "date" : "30 May 2021",
-        "description" : "Pagina web realizada con HTML, CSS Y JavaScript. Diseño adaptable.",
-        "imgurl" : "https://i.postimg.cc/rF9fJrJf/project1.png",
+        "title" : "League Of Roulette",
+        "date" : "18 Mar 2022",
+        "description" : "Una simple aplicación de escritorio hecha con Java, que te muestra en pantalla un personaje random de League of Legends que tendrás que jugar. Se utilizó Swing para la interfaz.",
+        "imgurl" : "https://i.postimg.cc/brcm60WB/project6.png",
         "githublink" : "github.com"
     }]
 }
