@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatDialogModule} from '@angular/material/dialog';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
@@ -9,7 +9,9 @@ import { EducationComponent } from './components/education/education.component';
 import { CertificationsAndProjectsComponent } from './components/certifications-and-projects/certifications-and-projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalLoginComponent } from './components/modal-login/modal-login.component'
 
 @NgModule({
   declarations: [
@@ -20,11 +22,14 @@ import { HttpClientModule } from '@angular/common/http'
     EducationComponent,
     CertificationsAndProjectsComponent,
     SkillsComponent,
-    FooterComponent
+    FooterComponent,
+    ModalLoginComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

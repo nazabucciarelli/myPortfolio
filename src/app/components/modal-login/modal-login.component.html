@@ -1,0 +1,29 @@
+<div id="modal">
+    <div class="form-header">
+        <h2 id="login-title">Inicie sesión</h2>
+        <button (click)="closeModal()" class="roundend float-end" id="btn-login-close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg></button>
+    </div>
+    <form id="login">
+        <div class="form-group">
+            <label><i class="fa fa-user"></i> Usuario</label>
+            <input class="form-input" type="text" placeholder="Ingrese aquí su nombre de usuario">
+        </div>
+
+        <div class="form-group">
+            <label><i class="fa fa-lock"></i> Contraseña</label>
+            <input class="form-input" type="password" placeholder="Ingrese aquí su contraseña">
+        </div>
+    
+        <div class="btn-container-login">
+            <p id="login-description">Solo el administrador del sitio podrá iniciar sesión con el fin de modificar el contenido del mismo.</p>
+
+        <button class="btn btn-primary">
+            Iniciar Sesión
+        </button>
+
+        </div>
+    </form>
+    
+</div>

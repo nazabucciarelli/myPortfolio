@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/services/portfolio.service';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ModalLoginComponent } from '../modal-login/modal-login.component';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class HeaderComponent implements OnInit {
   socialsData:any;
-  constructor(private datos:PortfolioService) { }
+  constructor(private datos:PortfolioService, private dialog:MatDialog) { }
 
   ngOnInit(): void {
     this.datos.obtenerDatos().subscribe(data => {
@@ -17,8 +18,8 @@ export class HeaderComponent implements OnInit {
     })
   }
 
-  showModal(){
-    console.log("MODAL FUNCIONA");
+  openDialog(){
+    this.dialog.open(ModalLoginComponent)
   }
 
 }

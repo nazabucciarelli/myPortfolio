@@ -10,11 +10,18 @@
                     <div class="carousel-inner" >
                         <div *ngFor="let cert of certificationsData">
                             <div *ngIf="cert == certificationsData[0]" class="carousel-item active">
+                                <div class="container-pen">
+                                    <a class="fa fa-pen rounded float-end delete-cert"></a>
+                                </div>
+                                
                                 <img [src]="cert.imgurl" class="d-block w-100" alt="Imagen de un certificado">
                             </div>
                         </div>
                         <div *ngFor="let certificado of certificationsData">
                             <div class="carousel-item" *ngIf="certificado != certificationsData[0]">
+                                <div class="container-pen">
+                                    <a class="fa fa-pen rounded float-end delete-cert"></a>
+                                </div>
                                 <img [src]="certificado.imgurl" class="d-block w-100" alt="Imagen de un certificado">
                               </div>
                         </div>
@@ -47,7 +54,10 @@
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{proyecto.title}}<i class="fa fa-trash rounded float-end delete-card"></i> </h5>
+                                            <h5 class="card-title">{{proyecto.title}} </h5>
+                                            <div class="icons-edit">
+                                                <a class="fa fa-pen rounded float-end delete-card"></a>
+                                            </div>
                                             <p class="card-subtitle text-muted">{{proyecto.date}}</p>
                                             <p class="card-text">{{proyecto.description}}</p>
                                             <a [href]="proyecto.githublink" target="_blank" class="btn btn-dark mt-3">Ver código  <i class="fa fa-github"></i></a>

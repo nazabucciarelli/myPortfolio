@@ -6,7 +6,10 @@
                 <img [src]="trabajo.imgurl">
             </div>
             <div class="col">
-                <h4>{{trabajo.position}}<a><i class="fa fa-trash rounded float-end delete-card"></i></a></h4>
+                <h4>{{trabajo.position}}</h4>
+                <div class="icons-edit">
+                    <a class="fa fa-pen rounded float-end delete-pen"></a>
+                </div>
                 <p class="period">{{trabajo.period}}</p>
                 <p class="work-description">{{trabajo.description}}</p>
             </div>

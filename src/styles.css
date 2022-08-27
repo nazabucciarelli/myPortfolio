@@ -82,9 +82,16 @@ div .socials{
 .info-profile{
     padding: 3vh;
 }
-.info-profile a i{
+.info-profile h2 a{
     font-size: 20px;
+    color: rgb(101, 105, 109);
+    transition: 0.3s;
+}
+
+.info-profile h2 a:hover{
+    cursor: pointer;
     color: #858585;
+    transition: 0.3s;
 }
 #position{
     font-weight: 400;
@@ -105,9 +112,18 @@ div .socials{
     width: 60%;
 }
 
-.delete-card{
+.delete-cert{
     padding: 10px;
+    color: rgb(101, 105, 109);
+    z-index: 10000;
+    position: absolute;
+    transition: 0.3s;
+}
+
+.delete-cert:hover{
+    cursor: pointer;
     color: #858585;
+    transition: 0.3s;
 }
 
 .info-section .img{
@@ -227,9 +243,11 @@ footer p{
    display: flex;
    align-items:center;
    justify-content: center;
-   
 }
 
+.btn-container-login{
+    text-align: center;
+}
 
 #login-title{
     font-size: 22px;
@@ -262,11 +280,23 @@ footer p{
 
 .icons-edit a{
     color: rgb(101, 105, 109);
-    padding: 2px;
+    transition: 0.3s;
 }
+
+.icons-edit a:hover{
+    cursor: pointer;
+    color: #858585;
+    transition: 0.3s;
+}
+
 
 .item-progress{
     padding: 20px;
+}
+
+.container-pen{
+    text-align: end; 
+    width: 90%;
 }
 
 .progress{
@@ -284,6 +314,10 @@ footer p{
 .header a{
     font-size:20px;
     float: right;
+}
+
+.header a:hover{
+    cursor: pointer;
 }
 
 .header{
@@ -317,3 +351,5 @@ footer p{
 
 /* Largue devices ( landscape desktop, 1025px and 1200px) */
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
