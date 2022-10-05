@@ -6,7 +6,7 @@
     "githublink" :"https://github.com/nazabucciarelli",
     "linkedinlink" : "https://www.linkedin.com/in/nazareno-bucciarelli-790928211/",
     "instagramlink" :"https://www.instagram.com/nazabucciarelli/",
-    "about" : "Me encuentro realizando el primer año de una carrera técnica de desarrollo de software. Tengo 19 años, llevo un año aprendiendo en el mundo de la programación y es algo que considero apasionante y dinámico. Estoy interesado en conseguir mi primer experiencia laboral en el campo desenvolviéndome como Jr. He realizado proyectos en Java, Python y sitios web con HTML, CSS Y JavaScript. Estoy en la segunda etapa del programa 'Argentina Programa', de la cual me certifico con el titulo de 'Desarrollador Web Full-Stack Jr.', aproximadamente en Enero del año siguiente ya lo estaré finalizando. De mi persona puedo destacar mis buenas habilidades comunicativas, responsabilidad, respeto, empatía y la disposición a estar constantemente mejorando, ya sea laboralmente o como persona.",
+    "about" : "¡Hola! 👋 soy Nazareno, me encuentro realizando el primer año de la carrera técnico superior en desarrollo de software. Tengo 19 años, llevo un año aprendiendo en el mundo de la programación y es algo que considero apasionante y dinámico.  Estoy interesado en conseguir mi primer experiencia laboral en el campo desenvolviéndome como junior. De mi persona puedo destacar mis buenas habilidades comunicativas, responsabilidad, respeto, empatía y la disposición a estar constantemente mejorando, ya sea laboralmente o como persona. Si quieres conocerme e informarte mas sobre mi persona, no dudes en contactarme... 📩",
     "certifications": [
         {
             "imgurl" : "https://i.postimg.cc/449Mzyq0/cert1.png"
@@ -87,46 +87,46 @@
         {
             "title" : "HTML",
             "iconclass" : "fa fa-html5",
-            "progress" : "35%"
+            "progress" : "75%"
         }, 
         {
             "title" : "CSS",
             "iconclass" : "fab fa-css3-alt",
-            "progress" : "30%"
+            "progress" : "60%"
         },
         {
             "title" : "JavaScript",
             "iconclass" : "fab fa-js",
-            "progress" : "20%"
+            "progress" : "30%"
         }
     ],
     "backendskills":[
         {
             "title" : "Python",
             "iconclass" : "fab fa-python",
-            "progress" : "20%"
+            "progress" : "75%"
         },
         {
             "title" : "Java",
             "iconclass" : "fab fa-java",
-            "progress" : "20%"
+            "progress" : "50%"
         }
     ],
     "communicationskills": [
         {
             "title" : "Comunicación",
             "iconclass" : "fa fa-comment",
-            "progress" : "10%"
+            "progress" : "90%"
         },
         {
             "title" : "Responsabilidad",
             "iconclass" : "fa fa-thumbs-up",
-            "progress" : "5%"
+            "progress" : "86%"
         },
         {
             "title" : "Autodidacta",
             "iconclass" : "fa fa-book",
-            "progress" : "2%"
+            "progress" : "70%"
         }
     ]
 }
