@@ -14,7 +14,7 @@ header{
 }
 
 nav{
-    background: linear-gradient(to bottom right, rgb(33, 122, 255), rgb(90, 83, 84));
+    background: linear-gradient(to bottom, rgb(10, 105, 194), rgb(92, 136, 146));
     box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.671);
 }
 
@@ -170,7 +170,7 @@ div .socials{
 }
 
 footer{
-    background: linear-gradient(to bottom right, rgb(90, 83, 84),rgb(33, 122, 255) );
+    background: linear-gradient(to top, rgb(10, 105, 194), rgb(92, 136, 146));
     height: 30vh;
     margin-top:5vh;
 }
