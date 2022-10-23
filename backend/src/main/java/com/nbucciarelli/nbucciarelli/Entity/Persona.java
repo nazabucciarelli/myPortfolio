@@ -41,12 +41,24 @@ public class Persona {
     @Size(min = 10, max = 50, message = "Longitud incorrecta")
     private String profesion;
     
+     @NotNull
+    @Size(min = 10, max = 100, message = "Longitud incorrecta")
+    private String urlgh;
+     
+     @NotNull
+    @Size(min = 10, max = 100, message = "Longitud incorrecta")
+    private String urllinkedin;
+     
+     @NotNull
+    @Size(min = 10, max = 100, message = "Longitud incorrecta")
+    private String urlinstagram;
+    
     @NotNull
     @Size(min = 10, max = 100, message = "Longitud incorrecta")
     private String urlcv;
      
      @NotNull
-    @Size(min = 40, max = 600, message = "Longitud incorrecta")
+    @Size(min = 40, max = 2000, message = "Longitud incorrecta")
     private String sobremi;
     
     

@@ -51,7 +51,10 @@ public class PersonaController {
             @RequestParam("img") String nuevo_img,
             @RequestParam("profesion") String nuevo_profesion,
             @RequestParam("urlcv") String nuevo_urlcv,
-            @RequestParam("sobremi") String nuevo_sobremi) {
+            @RequestParam("sobremi") String nuevo_sobremi,
+            @RequestParam("urlgh") String nuevo_urlhg,
+            @RequestParam("urllinkedin") String nuevo_urllinkedin,
+            @RequestParam("urlinstagram") String nuevo_urlinstagram) {
         Persona p = iPersonaService.findPersona(id);
 
         p.setNombre(nuevo_nombre);
@@ -60,6 +63,10 @@ public class PersonaController {
         p.setProfesion(nuevo_profesion);
         p.setUrlcv(nuevo_urlcv);
         p.setSobremi(nuevo_sobremi);
+        p.setUrlgh(nuevo_urlhg);
+        p.setUrlinstagram(nuevo_urlinstagram);
+        p.setUrllinkedin(nuevo_urllinkedin);
+        
 
         iPersonaService.savePersona(p);
         return p;
