@@ -11,7 +11,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ModalLoginComponent } from './components/modal-login/modal-login.component'
+import { ModalLoginComponent } from './components/modal-login/modal-login.component';
 
 @NgModule({
   declarations: [
