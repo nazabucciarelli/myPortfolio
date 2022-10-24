@@ -12,10 +12,10 @@ export class CertificationsAndProjectsComponent implements OnInit {
   constructor(private datos:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datos.obtenerDatos().subscribe(data => {
-      this.certificationsData = data.certifications;
-      this.projectsData = data.projects
-    })
+    //this.datos.obtenerDatos().subscribe(data => {
+      //this.certificationsData = data.certifications;
+      //this.projectsData = data.projects
+    //})
   }
 
 }

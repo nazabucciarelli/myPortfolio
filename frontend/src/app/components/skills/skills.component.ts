@@ -13,11 +13,12 @@ export class SkillsComponent implements OnInit {
   constructor(private datos:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datos.obtenerDatos().subscribe(data => {
-      this.frontendSkillsData = data.frontendskills;
-      this.backendSkillsData = data.backendskills;
-      this.communicationSkillsData = data.communicationskills;
-    })
+    //this.datos.obtenerDatos().subscribe(data => {
+      //this.frontendSkillsData = data.frontendskills;
+      //this.backendSkillsData = data.backendskills;
+      //this.communicationSkillsData = data.communicationskills;
+    //}
+    //)
   }
 
 }

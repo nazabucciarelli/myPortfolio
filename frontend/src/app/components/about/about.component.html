@@ -1,10 +1,10 @@
 
 <div class="row container-fluid">
-    <img class="profilepic col-md-6" [src]="aboutData.profilepic">
+    <img class="profilepic col-md-6" [src]="persona.img">
     <div class="col-md-6 info-profile">
-        <h2 id="name">{{aboutData.name}} <a class="fa fa-pen "></a></h2>
-        <h4 id="position">{{aboutData.position}}</h4>
-        <a [href]="aboutData.linkcv" target="_blank" class="btn btn-secondary">Ver CV</a>
+        <h2 id="name">{{persona.nombre}} {{persona.apellido}} <a class="fa fa-pen"></a></h2>
+        <h4 id="position">{{persona.profesion}}</h4>
+        <a [href]="persona.urlcv" target="_blank" class="btn btn-secondary">Ver CV</a>
     </div>
 </div>
     <div class="container-fluid about">
@@ -15,7 +15,7 @@
                 </div>
             </h2>
             
-            <p>{{aboutData.about}}</p>
+            <p>{{persona.sobremi}}</p>
         </div>
         
     </div>
