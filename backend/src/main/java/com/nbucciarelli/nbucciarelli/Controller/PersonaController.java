@@ -8,6 +8,7 @@ import com.nbucciarelli.nbucciarelli.Entity.Persona;
 import com.nbucciarelli.nbucciarelli.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Nazareno
  */
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
 
     @Autowired
@@ -30,6 +32,11 @@ public class PersonaController {
     @GetMapping("/personas/traer")
     public List<Persona> getPersonas() {
         return iPersonaService.getPersonas();
+    }
+    
+    @GetMapping("/personas/traer/perfil")
+    public Persona getPersonaPerfil(){
+        return iPersonaService.findPersona((long)1);
     }
 
     @PostMapping("/personas/crear")
@@ -44,8 +51,8 @@ public class PersonaController {
         return "Persona borrada exitosamente.";
     }
 
-    @PutMapping("/personas/editar/{id}")
-    public Persona editPersona(@PathVariable Long id,
+    @PutMapping("/personas/editar/1")
+    public Persona editPersona(
             @RequestParam("nombre") String nuevo_nombre,
             @RequestParam("apellido") String nuevo_apellido,
             @RequestParam("img") String nuevo_img,
@@ -55,7 +62,7 @@ public class PersonaController {
             @RequestParam("urlgh") String nuevo_urlhg,
             @RequestParam("urllinkedin") String nuevo_urllinkedin,
             @RequestParam("urlinstagram") String nuevo_urlinstagram) {
-        Persona p = iPersonaService.findPersona(id);
+        Persona p = iPersonaService.findPersona((long)1);
 
         p.setNombre(nuevo_nombre);
         p.setApellido(nuevo_apellido);
