@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalLoginComponent } from './components/modal-login/modal-login.component';
 import { FormsModule } from '@angular/forms';
+import { NewExperienceComponent } from './components/experience/new-experience.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     CertificationsAndProjectsComponent,
     SkillsComponent,
     FooterComponent,
-    ModalLoginComponent
+    ModalLoginComponent,
+    NewExperienceComponent
   ],
   imports: [
     BrowserModule,

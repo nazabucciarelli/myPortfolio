@@ -1,4 +1,4 @@
-export class ExperienciaModel {
+export class Experiencia{
     id?: number;
     nombre: String;
     descripcion: String;
