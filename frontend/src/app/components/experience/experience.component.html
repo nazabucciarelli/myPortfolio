@@ -1,17 +1,17 @@
 <div class="container-fluid info-section">
     <div class="container">
         <h2 class="title-section header">Experiencia <a><i class="fa fa-plus"></i></a></h2>
-        <div class="row" *ngFor="let trabajo of experienceData">
+        <div class="row" *ngFor="let exp of experiencia">
             <div class="col-sm-12 col-lg-2 img">
-                <img [src]="trabajo.imgurl">
+                <img [src]="exp.logo_empresa">
             </div>
             <div class="col">
-                <h4>{{trabajo.position}}</h4>
+                <h4>{{exp.nombre}}</h4>
                 <div class="icons-edit">
                     <a class="fa fa-pen rounded float-end delete-pen"></a>
                 </div>
-                <p class="period">{{trabajo.period}}</p>
-                <p class="work-description">{{trabajo.description}}</p>
+                <p class="period">{{exp.periodo}}</p>
+                <p class="work-description">{{exp.descripcion}}</p>
             </div>
             
         </div>
