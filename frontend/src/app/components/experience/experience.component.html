@@ -1,6 +1,6 @@
 <div class="container-fluid info-section">
     <div class="container">
-        <h2 class="title-section header">Experiencia <a><i class="fa fa-plus"></i></a></h2>
+        <h2 class="title-section header">Experiencia <a type="button" (click)="openDialog()"><i class="fa fa-plus"></i></a></h2>
         <div class="row" *ngFor="let exp of experiencia">
             <div class="col-sm-12 col-lg-2 img">
                 <img [src]="exp.logo_empresa">

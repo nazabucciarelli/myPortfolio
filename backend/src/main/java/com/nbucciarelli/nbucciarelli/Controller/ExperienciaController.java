@@ -44,10 +44,16 @@ public class ExperienciaController {
     @PostMapping ("/agregar")
     public ResponseEntity<?> addExperiencia(@RequestBody dtoExperiencia dtoexp){
         // Aca van algunas validaciones que no hice porque usa un objeto que creo en la Parte 15, que no vi.
-        if(StringUtils.isBlank(dtoexp.getNombre())){
-            return new ResponseEntity("La experiencia debe tener un nombre.",HttpStatus.BAD_REQUEST);
-        }
-        Experiencia exp = new Experiencia(dtoexp.getNombre(),dtoexp.getDescripcion(),dtoexp.getPeriodo(),dtoexp.getLogo_empresa());
+
+        Experiencia exp = new Experiencia();
+        
+        exp.setNombre(dtoexp.getNombre());
+        exp.setDescripcion(dtoexp.getDescripcion());
+        exp.setPeriodo(dtoexp.getPeriodo());
+        exp.setLogo_empresa(dtoexp.getLogo_empresa());
+        
+        expService.saveExperiencia(exp);
+        
         return new ResponseEntity("Experiencia agregada",HttpStatus.OK); // OJOOOOOO
     }
     

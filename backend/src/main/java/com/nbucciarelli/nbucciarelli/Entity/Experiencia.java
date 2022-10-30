@@ -37,7 +37,7 @@ public class Experiencia {
     private String periodo;
     
     @NotNull
-    @Size(min = 1, max = 250, message = "Longitud incorrecta")
+    @Size(min = 1, max = 500, message = "Longitud incorrecta")
     private String logo_empresa;
 
     public Experiencia(String posicion, String descripcion, String periodo, String logo_empresa) {
@@ -45,6 +45,9 @@ public class Experiencia {
         this.descripcion = descripcion;
         this.periodo = periodo;
         this.logo_empresa = logo_empresa;
+    }
+
+    public Experiencia() {
     }
     
     

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia.model';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
@@ -13,21 +14,24 @@ export class NewExperienceComponent implements OnInit {
   descripcion: String = ""
   periodo: String = ""
   logo_empresa: String = ""
-  constructor(private expService:ExperienciaService, private router: Router) { }
+  constructor(private expService:ExperienciaService, private dialog:MatDialog) {
+    
+
+   }
 
   ngOnInit(): void {
   }
 
   onCreate(): void{
-    const exp = new Experiencia(this.nombre,this.descripcion,this.periodo,this.logo_empresa)
-    this.expService.saveExperiencia(exp).subscribe(data => {
-      alert("Experiencia añadida");
-      this.router.navigate([""]);
-    }, err =>{
-      alert("Falló la creación de la experiencia")
-      this.router.navigate([""]);
-    }
-    )
+    let exp = new Experiencia(this.nombre,this.descripcion,this.periodo,this.logo_empresa)
+    this.expService.saveExperiencia(exp).subscribe(data=>{console.log("works")},err => {console.error("doesn't works")});
+    location.reload()
   }
+
+  closeModal(): void{
+    this.dialog.closeAll()
+  }
+
+
 
 }
