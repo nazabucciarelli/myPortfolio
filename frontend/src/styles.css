@@ -219,6 +219,7 @@ footer p{
     border: none;
     border-radius: 10px;
     max-width: 40ch;
+    margin: auto;
 }
 
 .form-group{

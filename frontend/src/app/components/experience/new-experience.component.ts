@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia.model';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-new-experience',
@@ -14,7 +15,7 @@ export class NewExperienceComponent implements OnInit {
   descripcion: String = ""
   periodo: String = ""
   logo_empresa: String = ""
-  constructor(private expService:ExperienciaService, private dialog:MatDialog) {
+  constructor(private expService:ExperienciaService, private router:Router) {
     
 
    }
@@ -24,14 +25,14 @@ export class NewExperienceComponent implements OnInit {
 
   onCreate(): void{
     let exp = new Experiencia(this.nombre,this.descripcion,this.periodo,this.logo_empresa)
-    this.expService.saveExperiencia(exp).subscribe(data=>{console.log("works")},err => {console.error("doesn't works")});
-    location.reload()
+    this.expService.saveExperiencia(exp).subscribe(data=>{
+      this.router.navigate([''])},err => {
+        this.router.navigate([''])});
+    
   }
 
-  closeModal(): void{
-    this.dialog.closeAll()
+  onClose():void{
+    this.router.navigate([''])
   }
-
-
 
 }

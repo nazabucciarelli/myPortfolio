@@ -14,6 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalLoginComponent } from './components/modal-login/modal-login.component';
 import { FormsModule } from '@angular/forms';
 import { NewExperienceComponent } from './components/experience/new-experience.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,14 +29,17 @@ import { NewExperienceComponent } from './components/experience/new-experience.c
     SkillsComponent,
     FooterComponent,
     ModalLoginComponent,
-    NewExperienceComponent
+    NewExperienceComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
