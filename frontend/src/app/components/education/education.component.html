@@ -3,17 +3,17 @@
         <h2 class="title-section header">Educacion <a><i class="fa fa-plus"></i></a></h2>
         
 
-        <div class="row" *ngFor="let estudio of educationData">
+        <div class="row" *ngFor="let edu of educacion">
             <div class="col-sm-12 col-lg-2 img">
-                <img [src]="estudio.imgurl">
+                <img [src]="edu.logo_educacion">
             </div>
             <div class="col">
-                <h4>{{estudio.title}}</h4>
+                <h4>{{edu.nombre}}</h4>
                     <div class="icons-edit">
                         <a class="fa fa-pen rounded float-end"></a>
                     </div>
-                <p class="period">{{estudio.period}}</p>
-                <p class="work-description">{{estudio.description}}</p>
+                <p class="period">{{edu.periodo}}</p>
+                <p class="work-description">{{edu.descripcion}}</p>
             </div>
         </div>
     </div>
