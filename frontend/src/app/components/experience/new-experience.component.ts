@@ -16,8 +16,6 @@ export class NewExperienceComponent implements OnInit {
   periodo: String = ""
   logo_empresa: String = ""
   constructor(private expService:ExperienciaService, private router:Router) {
-    
-
    }
 
   ngOnInit(): void {

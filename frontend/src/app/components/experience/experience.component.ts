@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Experiencia } from 'src/app/model/experiencia.model';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
-import { PortfolioService } from 'src/app/services/portfolio.service';
-import { NewExperienceComponent } from './new-experience.component';
 
 @Component({
   selector: 'app-experience',
@@ -13,7 +9,7 @@ import { NewExperienceComponent } from './new-experience.component';
 })
 export class ExperienceComponent implements OnInit {
   experiencia: Experiencia[] = [];
-  constructor(private datosExp:ExperienciaService,public modal:NgbModal) { }
+  constructor(private datosExp:ExperienciaService) { }
 
   ngOnInit(): void {
     this.getExperiencias();
@@ -25,7 +21,4 @@ export class ExperienceComponent implements OnInit {
     )
   }
 
-  openDialog(){
-
-  }
 }

@@ -17,6 +17,7 @@ import { NewExperienceComponent } from './components/experience/new-experience.c
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EditExperienceComponent } from './components/experience/edit-experience.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ModalLoginComponent,
     NewExperienceComponent,
     HomeComponent,
+    EditExperienceComponent,
   ],
   imports: [
     BrowserModule,
