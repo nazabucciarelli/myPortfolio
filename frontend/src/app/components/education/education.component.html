@@ -1,6 +1,6 @@
 <div class="container-fluid info-section">
     <div class="container">
-        <h2 class="title-section header">Educacion <a><i class="fa fa-plus"></i></a></h2>
+        <h2 class="title-section header">Educacion <a routerLink="addedu"><i class="fa fa-plus"></i></a></h2>
         
 
         <div class="row" *ngFor="let edu of educacion">
@@ -10,7 +10,7 @@
             <div class="col">
                 <h4>{{edu.nombre}}</h4>
                     <div class="icons-edit">
-                        <a class="fa fa-pen rounded float-end"></a>
+                        <a routerLink="editedu/{{edu.id}}" class="fa fa-pen rounded float-end"></a>
                     </div>
                 <p class="period">{{edu.periodo}}</p>
                 <p class="work-description">{{edu.descripcion}}</p>

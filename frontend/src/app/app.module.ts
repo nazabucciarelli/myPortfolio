@@ -18,6 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditExperienceComponent } from './components/experience/edit-experience.component';
+import { NewEducationComponent } from './components/education/new-education.component';
+import { EditEducationComponent } from './components/education/edit-education.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { EditExperienceComponent } from './components/experience/edit-experience
     NewExperienceComponent,
     HomeComponent,
     EditExperienceComponent,
+    NewEducationComponent,
+    EditEducationComponent,
   ],
   imports: [
     BrowserModule,
