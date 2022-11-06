@@ -47,6 +47,15 @@ div .socials i{
     font-size: 20px;
 }
 
+div .socials .edit-button{
+    color: rgb(206, 206, 206);
+    font-size: 15px ;
+}
+
+div .socials button{
+    margin:10px;
+}
+
 div .socials i:hover{
     color: rgba(230, 222, 222, 0.678);
     cursor: pointer;

@@ -26,41 +26,43 @@ public class Persona {
     private Long id;
     
     @NotNull
-    @Size(min = 1, max = 50, message = "Longitud incorrecta")
+    @Size(min = 0, max = 50, message = "Longitud incorrecta")
     private String nombre;
     
     @NotNull
-    @Size(min = 1, max = 50, message = "Longitud incorrecta")
+    @Size(min = 0, max = 50, message = "Longitud incorrecta")
     private String apellido;
+
     
     @NotNull
-    @Size(min = 10, max = 50, message = "Longitud incorrecta")
+    @Size(min = 0, max = 50, message = "Longitud incorrecta")
     private String img;
     
     @NotNull
-    @Size(min = 10, max = 50, message = "Longitud incorrecta")
+    @Size(min = 0, max = 50, message = "Longitud incorrecta")
     private String profesion;
     
-     @NotNull
-    @Size(min = 10, max = 100, message = "Longitud incorrecta")
-    private String urlgh;
-     
-     @NotNull
-    @Size(min = 10, max = 100, message = "Longitud incorrecta")
-    private String urllinkedin;
-     
-     @NotNull
-    @Size(min = 10, max = 100, message = "Longitud incorrecta")
-    private String urlinstagram;
     
     @NotNull
-    @Size(min = 10, max = 100, message = "Longitud incorrecta")
+    @Size(min = 0, max = 100, message = "Longitud incorrecta")
     private String urlcv;
      
      @NotNull
-    @Size(min = 40, max = 2000, message = "Longitud incorrecta")
+    @Size(min = 0, max = 2000, message = "Longitud incorrecta")
     private String sobremi;
-    
+
+    public Persona() {
+    }
+     
+        public Persona(Long id, String nombre, String apellido, String img, String profesion, String urlcv, String sobremi) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.img = img;
+        this.profesion = profesion;
+        this.urlcv = urlcv;
+        this.sobremi = sobremi;
+    }
     
     
 }

@@ -4,6 +4,7 @@
  */
 package com.nbucciarelli.nbucciarelli.Controller;
 
+import com.nbucciarelli.nbucciarelli.Dto.dtoPersona;
 import com.nbucciarelli.nbucciarelli.Entity.Persona;
 import com.nbucciarelli.nbucciarelli.Interface.IPersonaService;
 import java.util.List;
@@ -52,28 +53,16 @@ public class PersonaController {
     }
 
     @PutMapping("/personas/editar/1")
-    public Persona editPersona(
-            @RequestParam("nombre") String nuevo_nombre,
-            @RequestParam("apellido") String nuevo_apellido,
-            @RequestParam("img") String nuevo_img,
-            @RequestParam("profesion") String nuevo_profesion,
-            @RequestParam("urlcv") String nuevo_urlcv,
-            @RequestParam("sobremi") String nuevo_sobremi,
-            @RequestParam("urlgh") String nuevo_urlhg,
-            @RequestParam("urllinkedin") String nuevo_urllinkedin,
-            @RequestParam("urlinstagram") String nuevo_urlinstagram) {
+    public Persona editPersona( @RequestBody dtoPersona dtoPer) {
         Persona p = iPersonaService.findPersona((long)1);
 
-        p.setNombre(nuevo_nombre);
-        p.setApellido(nuevo_apellido);
-        p.setImg(nuevo_img);
-        p.setProfesion(nuevo_profesion);
-        p.setUrlcv(nuevo_urlcv);
-        p.setSobremi(nuevo_sobremi);
-        p.setUrlgh(nuevo_urlhg);
-        p.setUrlinstagram(nuevo_urlinstagram);
-        p.setUrllinkedin(nuevo_urllinkedin);
-        
+        p.setNombre(dtoPer.getNombre());
+        p.setApellido(dtoPer.getApellido());
+        p.setImg(dtoPer.getImg());
+        p.setProfesion(dtoPer.getProfesion());
+        p.setSobremi(dtoPer.getSobremi());
+        p.setUrlcv(dtoPer.getUrlcv());
+
 
         iPersonaService.savePersona(p);
         return p;

@@ -2,7 +2,7 @@
 <div class="row container-fluid">
     <img class="profilepic col-md-6" [src]="persona.img">
     <div class="col-md-6 info-profile">
-        <h2 id="name">{{persona.nombre}} {{persona.apellido}} <a class="fa fa-pen"></a></h2>
+        <h2 id="name">{{persona.nombre}} {{persona.apellido}} <a routerLink="editsobremi" class="fa fa-pen"></a></h2>
         <h4 id="position">{{persona.profesion}}</h4>
         <a [href]="persona.urlcv" target="_blank" class="btn btn-secondary">Ver CV</a>
     </div>

@@ -12,7 +12,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 })
 export class HeaderComponent implements OnInit {
   socialsData:any;
-  persona: Persona = new Persona('','','','','','','','','');
+  persona: Persona = new Persona('','','','','','');
   constructor(public personaService: PersonaService, private dialog:MatDialog) { }
 
   ngOnInit(): void {

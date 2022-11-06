@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 })
 export class AboutComponent implements OnInit {
   //aboutData: any; 
-  persona: Persona = new Persona('','','','','','','','','');
+  persona: Persona = new Persona('','','','','','');
   constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {

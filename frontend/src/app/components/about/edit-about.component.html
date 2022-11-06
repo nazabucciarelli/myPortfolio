@@ -1,0 +1,46 @@
+<div id="modal">
+    <div class="form-header">
+        <h2 id="login-title">Editar sobre mi</h2>
+        <button class="roundend float-end" (click)="onClose()" id="btn-login-close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg></button>
+    </div>
+    <form novalidate #f="ngForm"> 
+        <div class="form-group">
+            <label for="nombre"> Nombre: </label>
+            <input class="form-input" placeholder="Ingrese aquí su nombre" type="text" id="nombre" name="nombre" [(ngModel)]="pers.nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="apellido"> Apellido: </label>
+            <input class="form-input" placeholder="Ingrese aquí su apellido" type="text" id="apellido" name="apellido" [(ngModel)]="pers.apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="profesion"> Profesión: </label>
+            <input class="form-input" placeholder="Ingrese aquí su profesión" type="text" id="profesion" name="profesion" [(ngModel)]="pers.profesion" required>
+        </div>
+        <div class="form-group">
+            <label for="sobremi"> Cuenta un poco sobre ti: </label>
+            <input class="form-input" placeholder="Ingrese aquí información sobre ti" type="text" id="sobremi" name="sobremi" [(ngModel)]="pers.sobremi" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="img"> URL de foto de perfil: </label>
+            <input class="form-input" placeholder="Ingrese aquí URL de foto de perfil" type="text" id="img" name="img" [(ngModel)]="pers.img" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="urlcv"> URL de tu CV: </label>
+            <input class="form-input" placeholder="Ingrese aquí la URL a su CV" type="text" id="urlcv" name="urlcv" [(ngModel)]="pers.urlcv" required>
+        </div>
+        
+
+        <div class="btn-container-modal">
+            <button class="btn btn-primary" (click)="onEdit()">
+                Editar
+            </button>
+        </div>
+       
+    </form>
+    
+</div>
