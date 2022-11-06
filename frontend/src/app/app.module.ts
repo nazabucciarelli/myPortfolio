@@ -21,6 +21,7 @@ import { EditExperienceComponent } from './components/experience/edit-experience
 import { NewEducationComponent } from './components/education/new-education.component';
 import { EditEducationComponent } from './components/education/edit-education.component';
 import { EditAboutComponent } from './components/about/edit-about.component';
+import { EditHeaderComponent } from './components/header/edit-header.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EditAboutComponent } from './components/about/edit-about.component';
     EditExperienceComponent,
     NewEducationComponent,
     EditEducationComponent,
-    EditAboutComponent
+    EditAboutComponent,
+    EditHeaderComponent
   ],
   imports: [
     BrowserModule,

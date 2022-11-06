@@ -5,16 +5,15 @@
     
     <div class="container-fluid col-sm-11 ">
         <ol class="socials">
-            <button class="btn btn-secondary"><i class="fa fa-pen rounded float-end delete-pen edit-button"></i></button>
-            <a [href]="" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a [href]="" target="_blank"><i class="fa fa-github"></i></a>
-            <a [href]="" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <button class="btn btn-light m-2"><i routerLink="editheader" class="fa fa-pen rounded float-end delete-pen edit-button"></i></button>
+            <a [href]="header.urlig" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a [href]="header.urlgh" target="_blank"><i class="fa fa-github"></i></a>
+            <a [href]="header.urllink" target="_blank"><i class="fa fa-linkedin"></i></a>
         </ol>
         <button (click)="openDialog()" class="btn btn-light" id="btn-login"><i class='fas fa-sign-in-alt'></i> Log in</button>
     </div>
         
 </nav>
-
 <header>
     <div class="container-fluid banner">
     </div>

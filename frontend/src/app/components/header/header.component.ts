@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalLoginComponent } from '../modal-login/modal-login.component';
-import { Persona } from 'src/app/model/persona.model';
-import { PersonaService } from 'src/app/services/persona.service';
+import { HeaderService } from 'src/app/services/header.service';
+import { Header } from 'src/app/model/header.model';
 
 @Component({
   selector: 'app-header',
@@ -11,14 +10,14 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['../../../styles.css']
 })
 export class HeaderComponent implements OnInit {
-  socialsData:any;
-  persona: Persona = new Persona('','','','','','');
-  constructor(public personaService: PersonaService, private dialog:MatDialog) { }
+  header: Header = null;
+  constructor( private dialog:MatDialog, private headerServ: HeaderService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {
-      this.persona = data
-    })
+    this.headerServ.getHeader().subscribe(
+      data => {
+        this.header = data;
+      })
   }
 
   openDialog(){
