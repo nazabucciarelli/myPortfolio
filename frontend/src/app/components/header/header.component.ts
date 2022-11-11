@@ -8,7 +8,7 @@ import { Header } from 'src/app/model/header.model';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['../../../styles.css']
-})
+})  
 export class HeaderComponent implements OnInit {
   header: Header = null;
   constructor( private dialog:MatDialog, private headerServ: HeaderService) { }

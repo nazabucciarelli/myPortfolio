@@ -47,8 +47,9 @@ div .socials i{
     font-size: 20px;
 }
 
-div .socials .fa-pen{
-    color:#999999;
+div .socials .fa-link{
+    color:#a0a0a0;
+    
 }
 
 
@@ -223,6 +224,13 @@ footer p{
 #modal{
     border: none;
     border-radius: 10px;
+    max-width: 80ch;
+    margin: auto;
+}
+
+#login-modal{
+    border: none;
+    border-radius: 10px;
     max-width: 40ch;
     margin: auto;
 }
@@ -304,6 +312,8 @@ footer p{
     text-align: end; 
     width: 90%;
 }
+
+
 
 .progress{
     box-shadow:  1px 0.4px 4px rgba(0, 0, 0, 0.671);

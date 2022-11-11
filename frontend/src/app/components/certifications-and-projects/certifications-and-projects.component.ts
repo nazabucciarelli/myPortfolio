@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CertificationService } from 'src/app/services/certification.service';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -9,13 +10,14 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 export class CertificationsAndProjectsComponent implements OnInit {
   certificationsData: any;
   projectsData: any;
-  constructor(private datos:PortfolioService) { }
+  constructor(private certService:CertificationService) { }
 
   ngOnInit(): void {
-    //this.datos.obtenerDatos().subscribe(data => {
-      //this.certificationsData = data.certifications;
-      //this.projectsData = data.projects
-    //})
+    this.certService.getAllCertificacion().subscribe(
+      data => {
+        this.certificationsData = data
+      }
+    )
   }
 
 }

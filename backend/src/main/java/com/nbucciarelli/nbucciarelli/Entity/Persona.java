@@ -48,7 +48,7 @@ public class Persona {
     private String urlcv;
      
      @NotNull
-    @Size(min = 0, max = 2000, message = "Longitud incorrecta")
+    @Size(min = 0, max = 20000, message = "Longitud incorrecta")
     private String sobremi;
 
     public Persona() {
