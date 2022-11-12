@@ -58,7 +58,7 @@ public class CertificacionController {
     public Certificacion editCertificacion(@PathVariable Long id, @RequestBody dtoCertificacion nuevaCertificacion ){
         Certificacion cert = this.certificacionServ.getCertificacionById(id);
         
-        String nueva_url = nuevaCertificacion.getUrl_certificacion();
+        String nueva_url = nuevaCertificacion.getUrl_certificado();
         
         cert.setUrl_certificado(nueva_url);
         

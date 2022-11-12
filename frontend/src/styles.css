@@ -80,7 +80,8 @@ div .socials{
 
 .profilepic {
     border-radius: 100vh;
-    width: 240px;
+    width: 260px;
+    height: 245px;
     margin-top: -10vh;
     margin-left:10vh;
 }
@@ -342,6 +343,10 @@ footer p{
 
 .header a i{
     color: #858585;
+}
+
+.no-info-message{
+    text-align: center;
 }
 
 /* Extra small devices (phones, 480px and down) */

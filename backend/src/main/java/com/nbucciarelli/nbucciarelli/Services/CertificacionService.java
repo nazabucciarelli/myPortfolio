@@ -22,7 +22,7 @@ public class CertificacionService {
     ICertificacionRepository certificacionRepo;
     
     public Certificacion getCertificacionById(Long id){
-        return this.certificacionRepo.getById(id);
+        return this.certificacionRepo.findById(id).orElse(null);
     }
     
     public void saveCertificacion(Certificacion cert){

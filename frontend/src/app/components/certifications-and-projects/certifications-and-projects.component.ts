@@ -9,7 +9,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class CertificationsAndProjectsComponent implements OnInit {
   certificationsData: any;
-  projectsData: any;
+  projectsData: any = [];
   constructor(private certService:CertificationService) { }
 
   ngOnInit(): void {

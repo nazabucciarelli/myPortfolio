@@ -7,13 +7,13 @@
     </div>
     <form>
         <div class="form-group">
-            <label for="urlcertificado"> URL de imagen de certificado: </label>
-            <input class="form-input" placeholder="Ingrese aquí la URL" type="text" id="urlcertificado" name="urlcertificado" [(ngModel)]="url_certificado" required>
+            <label for="url_certificado"> URL de imagen de certificado: </label>
+            <input class="form-input" placeholder="Ingrese aquí la URL" type="text" id="url_certificado" name="url_certificado" [(ngModel)]="cert.url_certificado" required>
         </div>
 
         <div class="btn-container-modal">
             <button class="btn btn-primary" (click)="onEdit()">
-                Crear
+                Editar
             </button>
             <button class="btn btn-danger m-1" (click)="onDelete()">
                 Eliminar

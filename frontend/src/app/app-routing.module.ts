@@ -20,7 +20,7 @@ const routes:Routes = [
   { path: 'editsobremi', component: EditAboutComponent},
   { path: 'editheader', component: EditHeaderComponent},
   { path: 'addcertification', component: NewCertificationComponent},
-  { path: 'editcertification', component: EditCertificationComponent}
+  { path: 'editcertification/:id', component: EditCertificationComponent}
 ]
 
 @NgModule({

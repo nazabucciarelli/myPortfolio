@@ -16,10 +16,13 @@ import lombok.Setter;
 @Getter @Setter
 public class dtoCertificacion {
     @NotBlank
-    private String url_certificacion;
+    private String url_certificado;
 
-    public dtoCertificacion(String url_certificacion) {
-        this.url_certificacion = url_certificacion;
+    public dtoCertificacion(String url_certificado) {
+        this.url_certificado = url_certificado;
+    }
+
+    public dtoCertificacion() {
     }
     
     

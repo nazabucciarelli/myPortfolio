@@ -2,6 +2,9 @@
 <div class="container-fluid info-section">
     <div class="container">
         <h2 class="title-section header">Experiencia <a routerLink="addexp" type="button"><i class="fa fa-plus"></i></a></h2>
+        <div *ngIf="experiencia[0] == null" class="no-info-message">
+            <p>¡Oops! No hay información sobre tu experiencia por aquí...</p>
+        </div>
         <div class="row" *ngFor="let exp of experiencia">
             <div class="col-sm-12 col-lg-2 img">
                 <img [src]="exp.logo_empresa">

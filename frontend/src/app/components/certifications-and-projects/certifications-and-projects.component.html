@@ -6,12 +6,13 @@
                     <h2 class="title-section">Certificaciones</h2>
                     <a routerLink="addcertification"><i class="fa fa-plus"></i></a>
                 </div>
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" >
+                <p class="no-info-message" *ngIf="certificationsData[0] == null">¡Oops! No he encontrado certificaciones por aqui...</p>
+                <div *ngIf="certificationsData[0] != null" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div  class="carousel-inner" >
                         <div *ngFor="let cert of certificationsData">
                             <div *ngIf="cert == certificationsData[0]" class="carousel-item active">
                                 <div class="container-pen">
-                                    <a routerLink="editcertification" class="fa fa-pen rounded float-end delete-cert"></a>
+                                    <a routerLink="editcertification/{{cert.id}}" class="fa fa-pen rounded float-end delete-cert"></a>
                                 </div>
                                 
                                 <img [src]="cert.url_certificado" class="d-block w-100" alt="Imagen de un certificado">
@@ -20,7 +21,7 @@
                         <div *ngFor="let cert of certificationsData">
                             <div class="carousel-item" *ngIf="cert!= certificationsData[0]">
                                 <div class="container-pen">
-                                    <a routerLink="editcertification" class="fa fa-pen rounded float-end delete-cert"></a>
+                                    <a routerLink="editcertification/{{cert.id}}" class="fa fa-pen rounded float-end delete-cert"></a>
                                 </div>
                                 <img [src]="cert.url_certificado" class="d-block w-100" alt="Imagen de un certificado">
                               </div>
@@ -43,8 +44,8 @@
                     <h2 class="title-section">Proyectos</h2>
                     <a><i class="fa fa-plus"></i></a>
                 </div>
-                
-                <div id="scroll">
+                <p class="no-info-message" *ngIf="projectsData[0] == null">¡Oops! No he encontrado proyectos por aqui...</p>
+                <div *ngIf="projectsData[0] != null" id="scroll">
 
                         <div class="texto">
                             <div class="card" style="width: 100%;" *ngFor="let proyecto of projectsData">

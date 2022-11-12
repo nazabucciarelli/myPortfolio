@@ -2,8 +2,10 @@
 <div class="row container-fluid">
     <img class="profilepic col-md-6" [src]="persona.img">
     <div class="col-md-6 info-profile">
-        <h2 id="name">{{persona.nombre}} {{persona.apellido}} <a routerLink="editsobremi" class="fa fa-pen"></a></h2>
+        <h2 *ngIf="persona.nombre != '' && persona.apellido != ''" id="name">{{persona.nombre}} {{persona.apellido}} <a routerLink="editsobremi" class="fa fa-pen"></a></h2>
+        <h2  id="name" *ngIf="persona.nombre == '' || persona.apellido == ''">Ingresa tu nombre completo <a routerLink="editsobremi" class="fa fa-pen"></a></h2>
         <h4 id="position">{{persona.profesion}}</h4>
+        <p *ngIf="persona.profesion == '' ">Ingresa tu profesión</p>
         <a [href]="persona.urlcv" target="_blank" class="btn btn-secondary">Ver CV</a>
     </div>
 </div>
@@ -12,7 +14,8 @@
             <h2 class="title-section header">Acerca de
                 
             </h2>
-            
+            <p class="no-info-message" *ngIf="persona.sobremi == ''"> ¡Oops! No hay información sobre ti por aquí...</p>
+
             <p>{{persona.sobremi}}</p>
         </div>
         
