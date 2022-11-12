@@ -10,6 +10,8 @@ import { EditAboutComponent } from './components/about/edit-about.component';
 import { EditHeaderComponent } from './components/header/edit-header.component';
 import { NewCertificationComponent } from './components/certifications-and-projects/new-certification.component';
 import { EditCertificationComponent } from './components/certifications-and-projects/edit-certification.component';
+import { NewProjectComponent } from './components/certifications-and-projects/new-project.component';
+import { EditProjectComponent } from './components/certifications-and-projects/edit-project.component';
 
 const routes:Routes = [
   { path: '', component: HomeComponent },
@@ -20,7 +22,9 @@ const routes:Routes = [
   { path: 'editsobremi', component: EditAboutComponent},
   { path: 'editheader', component: EditHeaderComponent},
   { path: 'addcertification', component: NewCertificationComponent},
-  { path: 'editcertification/:id', component: EditCertificationComponent}
+  { path: 'editcertification/:id', component: EditCertificationComponent},
+  { path: 'addproyecto',component:NewProjectComponent},
+  { path: 'editproyecto/:id',component:EditProjectComponent}
 ]
 
 @NgModule({

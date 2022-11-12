@@ -42,26 +42,26 @@
             <div class="col sm-12 section">
                 <div class="container header">
                     <h2 class="title-section">Proyectos</h2>
-                    <a><i class="fa fa-plus"></i></a>
+                    <a routerLink="addproyecto"><i class="fa fa-plus"></i></a>
                 </div>
                 <p class="no-info-message" *ngIf="projectsData[0] == null">¡Oops! No he encontrado proyectos por aqui...</p>
                 <div *ngIf="projectsData[0] != null" id="scroll">
 
                         <div class="texto">
-                            <div class="card" style="width: 100%;" *ngFor="let proyecto of projectsData">
+                            <div class="card" *ngFor="let proyecto of projectsData">
                                 <div class="row no-gutters">
                                     <div class="col-sm-7 cont-img">
-                                        <img class="card-img" [src]="proyecto.imgurl" alt="Imagen sobre un proyecto">
+                                        <img class="card-img" [src]="proyecto.url_imagen" alt="Imagen sobre un proyecto">
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{proyecto.title}} </h5>
+                                            <h5 class="card-title">{{proyecto.nombre}} </h5>
                                             <div class="icons-edit">
-                                                <a class="fa fa-pen rounded float-end delete-card"></a>
+                                                <a routerLink="editproyecto/{{proyecto.id}}" class="fa fa-pen rounded float-end delete-card"></a>
                                             </div>
-                                            <p class="card-subtitle text-muted">{{proyecto.date}}</p>
-                                            <p class="card-text">{{proyecto.description}}</p>
-                                            <a [href]="proyecto.githublink" target="_blank" class="btn btn-dark mt-3">Ver código  <i class="fa fa-github"></i></a>
+                                            <p class="card-subtitle text-muted">{{proyecto.fecha}}</p>
+                                            <p class="card-text">{{proyecto.descripcion}}</p>
+                                            <a [href]="proyecto.github_link" target="_blank" class="btn btn-dark mt-3">Ver código  <i class="fa fa-github"></i></a>
                                         </div>
                                     </div>
                                 </div>

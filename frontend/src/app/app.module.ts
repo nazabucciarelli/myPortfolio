@@ -24,6 +24,8 @@ import { EditAboutComponent } from './components/about/edit-about.component';
 import { EditHeaderComponent } from './components/header/edit-header.component';
 import { NewCertificationComponent } from './components/certifications-and-projects/new-certification.component';
 import { EditCertificationComponent } from './components/certifications-and-projects/edit-certification.component';
+import { EditProjectComponent } from './components/certifications-and-projects/edit-project.component';
+import { NewProjectComponent } from './components/certifications-and-projects/new-project.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { EditCertificationComponent } from './components/certifications-and-proj
     EditAboutComponent,
     EditHeaderComponent,
     NewCertificationComponent,
-    EditCertificationComponent
+    EditCertificationComponent,
+    EditProjectComponent,
+    NewProjectComponent
   ],
   imports: [
     BrowserModule,

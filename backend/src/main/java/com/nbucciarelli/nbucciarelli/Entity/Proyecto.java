@@ -26,7 +26,7 @@ public class Proyecto {
     
         
     @NotNull
-    @Size(min = 0, max = 30, message = "Longitud incorrecta")
+    @Size(min = 0, max = 50, message = "Longitud incorrecta")
     private String nombre;
         
     @NotNull
@@ -34,7 +34,7 @@ public class Proyecto {
     private String fecha;
         
     @NotNull
-    @Size(min = 0, max = 200, message = "Longitud incorrecta")
+    @Size(min = 0, max = 250, message = "Longitud incorrecta")
     private String descripcion;
         
     @NotNull

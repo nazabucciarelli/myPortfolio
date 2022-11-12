@@ -7,15 +7,15 @@ import { Persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  url = "http://localhost:8080/"
+  url = "http://localhost:8080/personas"
   constructor(private http: HttpClient) { }
 
   public getPersona(): Observable<Persona>{
-    return this.http.get<Persona>(this.url + 'personas/traer/perfil');
+    return this.http.get<Persona>(this.url + '/traer/perfil');
   }
 
   public editPersona(pers:Persona): Observable<any>{
-    return this.http.put<any>(this.url + "personas/editar/1",pers);
+    return this.http.put<any>(this.url + "/editar/1",pers);
   }
 
   
