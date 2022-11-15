@@ -4,7 +4,7 @@
  */
 package com.nbucciarelli.nbucciarelli.Repository;
 
-import com.nbucciarelli.nbucciarelli.Entity.Proyecto;
+import com.nbucciarelli.nbucciarelli.Entity.FrontSkill;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,7 +12,8 @@ import org.springframework.stereotype.Repository;
  *
  * @author Nazareno
  */
+
 @Repository
-public interface IProyectoRepository extends JpaRepository<Proyecto,Long> {
+public interface IFrontSkillRepository extends JpaRepository<FrontSkill,Long>{
     
 }

@@ -12,6 +12,8 @@ import { NewCertificationComponent } from './components/certifications-and-proje
 import { EditCertificationComponent } from './components/certifications-and-projects/edit-certification.component';
 import { NewProjectComponent } from './components/certifications-and-projects/new-project.component';
 import { EditProjectComponent } from './components/certifications-and-projects/edit-project.component';
+import { NewFrontSkillComponent } from './components/skills/new-front-skill.component';
+import { EditFrontSkillComponent } from './components/skills/edit-front-skill.component';
 
 const routes:Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +26,9 @@ const routes:Routes = [
   { path: 'addcertification', component: NewCertificationComponent},
   { path: 'editcertification/:id', component: EditCertificationComponent},
   { path: 'addproyecto',component:NewProjectComponent},
-  { path: 'editproyecto/:id',component:EditProjectComponent}
+  { path: 'editproyecto/:id',component:EditProjectComponent},
+  { path: 'addfrontskill',component: NewFrontSkillComponent},
+  { path: 'editfrontskill/:id', component: EditFrontSkillComponent}
 ]
 
 @NgModule({

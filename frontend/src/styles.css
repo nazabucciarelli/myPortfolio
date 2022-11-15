@@ -310,6 +310,16 @@ footer p{
     padding: 20px;
 }
 
+.item-progress img{
+    width: 30px;
+    transition: 0.4s;
+}
+
+.item-progress img:hover{
+    width: 35px;
+    transition: 0.4s;
+}
+
 .container-pen{
     text-align: end; 
     width: 90%;

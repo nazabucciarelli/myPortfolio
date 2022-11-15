@@ -26,6 +26,8 @@ import { NewCertificationComponent } from './components/certifications-and-proje
 import { EditCertificationComponent } from './components/certifications-and-projects/edit-certification.component';
 import { EditProjectComponent } from './components/certifications-and-projects/edit-project.component';
 import { NewProjectComponent } from './components/certifications-and-projects/new-project.component';
+import { NewFrontSkillComponent } from './components/skills/new-front-skill.component';
+import { EditFrontSkillComponent } from './components/skills/edit-front-skill.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { NewProjectComponent } from './components/certifications-and-projects/ne
     NewCertificationComponent,
     EditCertificationComponent,
     EditProjectComponent,
-    NewProjectComponent
+    NewProjectComponent,
+    NewFrontSkillComponent,
+    EditFrontSkillComponent
   ],
   imports: [
     BrowserModule,

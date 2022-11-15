@@ -6,11 +6,13 @@ package com.nbucciarelli.nbucciarelli.Repository;
 
 import com.nbucciarelli.nbucciarelli.Entity.Header;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Nazareno
  */
+@Repository
 public interface IHeaderRepository extends JpaRepository <Header,Long>{
     
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CertificationService } from 'src/app/services/certification.service';
-import { PortfolioService } from 'src/app/services/portfolio.service';
 import { ProyectoService } from 'src/app/services/proyecto.service';
 
 @Component({

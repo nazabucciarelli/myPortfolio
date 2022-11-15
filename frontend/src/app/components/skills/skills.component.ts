@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { FrontSkillService } from 'src/app/services/front-skill.service';
 
 @Component({
   selector: 'app-skills',
@@ -10,15 +10,14 @@ export class SkillsComponent implements OnInit {
   frontendSkillsData: any;
   backendSkillsData: any;
   communicationSkillsData: any;
-  constructor(private datos:PortfolioService) { }
+  constructor(private frontSkillService: FrontSkillService) { }
 
   ngOnInit(): void {
-    //this.datos.obtenerDatos().subscribe(data => {
-      //this.frontendSkillsData = data.frontendskills;
-      //this.backendSkillsData = data.backendskills;
-      //this.communicationSkillsData = data.communicationskills;
-    //}
-    //)
+    this.frontSkillService.getAllFrontSkill().subscribe(
+      data => {
+        this.frontendSkillsData = data
+      }
+    )
   }
 
 }

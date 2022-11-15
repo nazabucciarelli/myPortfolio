@@ -5,20 +5,20 @@
         <div class="col-lg-4 col-sm-12">
             <div class="container header">
                 <h4>Front-End</h4> 
-                <a href=""><i class="fa fa-plus"></i></a>
+                <a routerLink="addfrontskill"><i class="fa fa-plus"></i></a>
             </div>
             
             <div class="item-progress" *ngFor="let skill of frontendSkillsData">
                 <div class="row">
                     <div class="col">
-                        <h5><i [class]="skill.iconclass"></i> {{skill.title}}</h5>
+                        <h5><img [src]="skill.icono"> {{skill.nombre}}</h5>
                     </div>
                     <div class="col icons-edit">    
-                            <a href=""><i class="fa fa-pen"></i></a>
+                            <a routerLink="editfrontskill/{{skill.id}}"><i class="fa fa-pen"></i></a>
                     </div>
                 </div>
                   <div class="progress">  
-                    <div class="progress-bar bg-success" role="progressbar" [ngStyle]="{'width':skill.progress}" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" [ngStyle]="{'width':skill.progreso + '%'}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>           
         </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="col-lg-4 col-sm-12">
             <div class="container header">
-                <h4>Soft skills</h4> 
+                <h4>Otras habilidades</h4> 
                 <a href=""><i class="fa fa-plus"></i></a>
             </div>
             <div class="item-progress" *ngFor="let skill of communicationSkillsData">
