@@ -1,4 +1,4 @@
-export class FrontSkill {
+export class Skill {
     id?:number;
     nombre:String;
     icono:String;

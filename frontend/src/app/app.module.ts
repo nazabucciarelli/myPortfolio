@@ -28,6 +28,8 @@ import { EditProjectComponent } from './components/certifications-and-projects/e
 import { NewProjectComponent } from './components/certifications-and-projects/new-project.component';
 import { NewFrontSkillComponent } from './components/skills/new-front-skill.component';
 import { EditFrontSkillComponent } from './components/skills/edit-front-skill.component';
+import { NewBackSkillComponent } from './components/skills/new-back-skill.component';
+import { EditBackSkillComponent } from './components/skills/edit-back-skill.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { EditFrontSkillComponent } from './components/skills/edit-front-skill.co
     EditProjectComponent,
     NewProjectComponent,
     NewFrontSkillComponent,
-    EditFrontSkillComponent
+    EditFrontSkillComponent,
+    NewBackSkillComponent,
+    EditBackSkillComponent
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@
  */
 package com.nbucciarelli.nbucciarelli.Controller;
 
-import com.nbucciarelli.nbucciarelli.Dto.dtoFrontSkill;
+import com.nbucciarelli.nbucciarelli.Dto.dtoSkill;
 import com.nbucciarelli.nbucciarelli.Entity.FrontSkill;
 import com.nbucciarelli.nbucciarelli.Services.FrontSkillService;
 import java.util.List;
@@ -55,7 +55,7 @@ public class FrontSkillController {
     }
     
     @PutMapping("/editar/{id}")
-    public FrontSkill editFrontSkill(@PathVariable Long id, @RequestBody dtoFrontSkill dtoFskill){
+    public FrontSkill editFrontSkill(@PathVariable Long id, @RequestBody dtoSkill dtoFskill){
         FrontSkill fs = frontSkillService.getFrontSkillById(id);
         
        String nuevoNombre = dtoFskill.getNombre();

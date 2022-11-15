@@ -14,6 +14,8 @@ import { NewProjectComponent } from './components/certifications-and-projects/ne
 import { EditProjectComponent } from './components/certifications-and-projects/edit-project.component';
 import { NewFrontSkillComponent } from './components/skills/new-front-skill.component';
 import { EditFrontSkillComponent } from './components/skills/edit-front-skill.component';
+import { NewBackSkillComponent } from './components/skills/new-back-skill.component';
+import { EditBackSkillComponent } from './components/skills/edit-back-skill.component';
 
 const routes:Routes = [
   { path: '', component: HomeComponent },
@@ -28,7 +30,9 @@ const routes:Routes = [
   { path: 'addproyecto',component:NewProjectComponent},
   { path: 'editproyecto/:id',component:EditProjectComponent},
   { path: 'addfrontskill',component: NewFrontSkillComponent},
-  { path: 'editfrontskill/:id', component: EditFrontSkillComponent}
+  { path: 'editfrontskill/:id', component: EditFrontSkillComponent},
+  { path: 'addbackskill', component: NewBackSkillComponent},
+  { path: 'editbackskill/:id', component: EditBackSkillComponent}
 ]
 
 @NgModule({

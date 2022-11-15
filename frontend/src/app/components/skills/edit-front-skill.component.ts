@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FrontSkill } from 'src/app/model/front-skill.model';
+import { Skill } from 'src/app/model/skill.model';
 import { FrontSkillService } from 'src/app/services/front-skill.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { FrontSkillService } from 'src/app/services/front-skill.service';
   styleUrls: ['./edit-front-skill.component.css']
 })
 export class EditFrontSkillComponent implements OnInit {
-  frontSkill : FrontSkill = null;
+  frontSkill : Skill = null;
   id:number = this.ActRoute.snapshot.params['id'];
   constructor(private frontSkillService:FrontSkillService, private router: Router, private ActRoute:ActivatedRoute) { }
 
@@ -38,6 +38,8 @@ export class EditFrontSkillComponent implements OnInit {
   onDelete():void{
     this.frontSkillService.deleteSkillById(this.id).subscribe(
       data =>{
+        this.router.navigate([''])
+      }, err => {
         this.router.navigate([''])
       }
     )

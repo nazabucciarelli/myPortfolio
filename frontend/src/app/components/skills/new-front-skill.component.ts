@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FrontSkill } from 'src/app/model/front-skill.model';
+import { Skill } from 'src/app/model/skill.model';
 import { FrontSkillService } from 'src/app/services/front-skill.service';
 
 @Component({
@@ -22,7 +22,7 @@ export class NewFrontSkillComponent implements OnInit {
   }
 
   onCreate():void{
-    this.frontSkillService.addFrontSkill(new FrontSkill(this.nombre,this.icono,this.progreso)).subscribe(
+    this.frontSkillService.addFrontSkill(new Skill(this.nombre,this.icono,this.progreso)).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{

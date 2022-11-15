@@ -14,7 +14,7 @@ import lombok.Setter;
  */
 
 @Getter @Setter
-public class dtoFrontSkill {
+public class dtoSkill {
     @NotBlank
     private String nombre;
     @NotBlank
@@ -22,13 +22,13 @@ public class dtoFrontSkill {
     @NotBlank
     private Integer progreso;
 
-    public dtoFrontSkill(String nombre, String icono, Integer progreso) {
+    public dtoSkill(String nombre, String icono, Integer progreso) {
         this.nombre = nombre;
         this.icono = icono;
         this.progreso = progreso;
     }
 
-    public dtoFrontSkill() {
+    public dtoSkill() {
     }
     
 }
