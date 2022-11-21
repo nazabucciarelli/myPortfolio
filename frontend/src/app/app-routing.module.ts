@@ -16,6 +16,8 @@ import { NewFrontSkillComponent } from './components/skills/new-front-skill.comp
 import { EditFrontSkillComponent } from './components/skills/edit-front-skill.component';
 import { NewBackSkillComponent } from './components/skills/new-back-skill.component';
 import { EditBackSkillComponent } from './components/skills/edit-back-skill.component';
+import { NewOtraSkillComponent } from './components/skills/new-otra-skill.component';
+import { EditOtraSkillComponent } from './components/skills/edit-otra-skill.component';
 
 const routes:Routes = [
   { path: '', component: HomeComponent },
@@ -32,7 +34,9 @@ const routes:Routes = [
   { path: 'addfrontskill',component: NewFrontSkillComponent},
   { path: 'editfrontskill/:id', component: EditFrontSkillComponent},
   { path: 'addbackskill', component: NewBackSkillComponent},
-  { path: 'editbackskill/:id', component: EditBackSkillComponent}
+  { path: 'editbackskill/:id', component: EditBackSkillComponent},
+  { path: 'addotraskill', component: NewOtraSkillComponent},
+  { path: 'editotraskill/:id', component: EditOtraSkillComponent}
 ]
 
 @NgModule({

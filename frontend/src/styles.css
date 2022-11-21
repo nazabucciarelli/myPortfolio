@@ -14,7 +14,7 @@ header{
 }
 
 nav{
-    background: linear-gradient(to bottom, rgb(10, 105, 194), rgb(92, 136, 146));
+    background: linear-gradient(to bottom, rgb(19, 173, 245),rgb(58, 107, 199));
     box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.671);
 }
 
@@ -32,7 +32,7 @@ nav .btn-light{
 
 .logo{
     transition: 0.7s;
-    width:150px;
+    width:130px;
     margin: 0 auto;
 }
 
@@ -65,7 +65,7 @@ div .socials{
 
 
 .banner{
-    background-image: url(assets/banner.jpg);
+    background-image: url(https://images.unsplash.com/photo-1526374870839-e155464bb9b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
     height: 40vh;
     background-size: cover;
     background-position: center;

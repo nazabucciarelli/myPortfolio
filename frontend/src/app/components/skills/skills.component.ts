@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BackSkillService } from 'src/app/services/back-skill.service';
 import { FrontSkillService } from 'src/app/services/front-skill.service';
+import { OtraSkillService } from 'src/app/services/otra-skill.service';
 
 @Component({
   selector: 'app-skills',
@@ -10,8 +11,8 @@ import { FrontSkillService } from 'src/app/services/front-skill.service';
 export class SkillsComponent implements OnInit {
   frontendSkillsData: any;
   backendSkillsData: any;
-  communicationSkillsData: any;
-  constructor(private frontSkillService: FrontSkillService,private backSkillService: BackSkillService) { }
+  otrasSkillsData: any;
+  constructor(private frontSkillService: FrontSkillService,private backSkillService: BackSkillService, private otraSkillService: OtraSkillService) { }
 
   ngOnInit(): void {
     this.frontSkillService.getAllFrontSkill().subscribe(
@@ -22,6 +23,11 @@ export class SkillsComponent implements OnInit {
     this.backSkillService.getAllBackSkill().subscribe(
       data =>{
         this.backendSkillsData = data;
+      }
+    )
+    this.otraSkillService.getAllOtraSkill().subscribe(
+      data =>{
+        this.otrasSkillsData = data;
       }
     )
   }

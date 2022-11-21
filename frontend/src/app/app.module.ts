@@ -30,6 +30,8 @@ import { NewFrontSkillComponent } from './components/skills/new-front-skill.comp
 import { EditFrontSkillComponent } from './components/skills/edit-front-skill.component';
 import { NewBackSkillComponent } from './components/skills/new-back-skill.component';
 import { EditBackSkillComponent } from './components/skills/edit-back-skill.component';
+import { NewOtraSkillComponent } from './components/skills/new-otra-skill.component';
+import { EditOtraSkillComponent } from './components/skills/edit-otra-skill.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { EditBackSkillComponent } from './components/skills/edit-back-skill.comp
     NewFrontSkillComponent,
     EditFrontSkillComponent,
     NewBackSkillComponent,
-    EditBackSkillComponent
+    EditBackSkillComponent,
+    NewOtraSkillComponent,
+    EditOtraSkillComponent
   ],
   imports: [
     BrowserModule,
