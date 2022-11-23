@@ -8,7 +8,7 @@ import { ProyectoService } from 'src/app/services/proyecto.service';
   styleUrls: ['./certifications-and-projects.component.css']
 })
 export class CertificationsAndProjectsComponent implements OnInit {
-  certificationsData: any;
+  certificationsData: any = [];
   projectsData: any = [];
   constructor(private certService:CertificationService, private proyService:ProyectoService) { }
 

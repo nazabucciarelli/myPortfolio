@@ -9,7 +9,7 @@ import { EducacionService } from 'src/app/services/educacion.service';
   styleUrls: ['./edit-education.component.css']
 })
 export class EditEducationComponent implements OnInit {
-  edu: Educacion = null;
+  edu: Educacion = new Educacion("","","","");
   id = this.actRoute.snapshot.params['id'];
   constructor(private eduService: EducacionService, private router: Router, private actRoute:ActivatedRoute) { }
 

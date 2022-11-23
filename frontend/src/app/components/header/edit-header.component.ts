@@ -9,7 +9,7 @@ import { HeaderService } from 'src/app/services/header.service';
   styleUrls: ['./edit-header.component.css']
 })
 export class EditHeaderComponent implements OnInit {
-  header: Header;
+  header: Header = new Header("","","");
   constructor(private headerServ:HeaderService, private router:Router) { }
 
   ngOnInit(): void {

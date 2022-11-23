@@ -9,7 +9,7 @@ import { OtraSkillService } from 'src/app/services/otra-skill.service';
   styleUrls: ['./edit-otra-skill.component.css']
 })
 export class EditOtraSkillComponent implements OnInit {
-  otraSkill : Skill = null;
+  otraSkill : Skill = new Skill("","",0);
   id:number = this.ActRoute.snapshot.params['id'];
   constructor(private otraSkillService:OtraSkillService, private router: Router, private ActRoute:ActivatedRoute) { }
 

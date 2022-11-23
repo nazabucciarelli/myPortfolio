@@ -7,7 +7,9 @@
                 <h4>Front-End</h4> 
                 <a routerLink="addfrontskill"><i class="fa fa-plus"></i></a>
             </div>
-            
+            <div *ngIf="backendSkillsData[0] == null" class="no-info-message">
+                <p>¡Oops! No hay información sobre tus habilidades frontend por aquí...</p>
+            </div>
             <div class="item-progress" *ngFor="let skill of frontendSkillsData">
                 <div class="row">
                     <div class="col">
@@ -32,6 +34,9 @@
                 <h4>Back-End</h4> 
                 <a routerLink="addbackskill"><i class="fa fa-plus"></i></a>
             </div>
+            <div *ngIf="backendSkillsData[0] == null" class="no-info-message">
+                <p>¡Oops! No hay información sobre tus habilidades backend por aquí...</p>
+            </div>
             <div class="item-progress" *ngFor="let skill of backendSkillsData">
                 <div class="row">
                     <div class="col">
@@ -55,6 +60,9 @@
             <div class="container header">
                 <h4>Otras habilidades</h4> 
                 <a ><i routerLink="addotraskill" class="fa fa-plus"></i></a>
+            </div>
+            <div *ngIf="backendSkillsData[0] == null" class="no-info-message">
+                <p>¡Oops! No hay información sobre tus otras habilidades por aquí...</p>
             </div>
             <div class="item-progress" *ngFor="let skill of otrasSkillsData">
                 <div class="row">

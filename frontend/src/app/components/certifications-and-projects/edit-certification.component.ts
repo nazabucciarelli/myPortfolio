@@ -9,7 +9,7 @@ import { CertificationService } from 'src/app/services/certification.service';
   styleUrls: ['./edit-certification.component.css']
 })
 export class EditCertificationComponent implements OnInit {
-  cert: Certification = null;
+  cert: Certification = new Certification("");
   id:number = this.actRoute.snapshot.params['id'];
   constructor(private router: Router, private actRoute:ActivatedRoute, private certificationServ:CertificationService) { }
 

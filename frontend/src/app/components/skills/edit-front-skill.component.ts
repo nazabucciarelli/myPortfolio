@@ -9,7 +9,7 @@ import { FrontSkillService } from 'src/app/services/front-skill.service';
   styleUrls: ['./edit-front-skill.component.css']
 })
 export class EditFrontSkillComponent implements OnInit {
-  frontSkill : Skill = null;
+  frontSkill : Skill = new Skill("","",0);
   id:number = this.ActRoute.snapshot.params['id'];
   constructor(private frontSkillService:FrontSkillService, private router: Router, private ActRoute:ActivatedRoute) { }
 

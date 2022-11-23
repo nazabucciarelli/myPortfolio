@@ -10,7 +10,7 @@ import { Header } from 'src/app/model/header.model';
   styleUrls: ['../../../styles.css']
 })  
 export class HeaderComponent implements OnInit {
-  header: Header;
+  header: Header = new Header("","","");
   constructor( private dialog:MatDialog, private headerServ: HeaderService) { }
 
   ngOnInit(): void {

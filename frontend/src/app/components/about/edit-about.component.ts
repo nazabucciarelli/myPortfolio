@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['./edit-about.component.css']
 })
 export class EditAboutComponent implements OnInit {
-  pers: Persona;
+  pers: Persona = new Persona("","","","","","")
   constructor(private persService:PersonaService,private router: Router) { }
 
   ngOnInit(): void {

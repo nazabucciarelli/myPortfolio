@@ -9,7 +9,7 @@ import { BackSkillService } from 'src/app/services/back-skill.service';
   styleUrls: ['./edit-back-skill.component.css']
 })
 export class EditBackSkillComponent implements OnInit {
-  backSkill : Skill = null;
+  backSkill : Skill = new Skill("","",0);
   id:number = this.ActRoute.snapshot.params['id'];
   constructor(private backSkillService:BackSkillService, private router: Router, private ActRoute:ActivatedRoute) { }
 

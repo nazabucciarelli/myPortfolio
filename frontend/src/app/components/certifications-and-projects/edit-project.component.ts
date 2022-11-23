@@ -9,7 +9,7 @@ import { ProyectoService } from 'src/app/services/proyecto.service';
   styleUrls: ['./edit-project.component.css']
 })
 export class EditProjectComponent implements OnInit {
-  proy: Proyecto = null;
+  proy: Proyecto = new Proyecto("","","","","");
   id:number = this.actRoute.snapshot.params['id'];
   constructor(private router: Router, private actRoute: ActivatedRoute, private proyService:ProyectoService) { }
 
