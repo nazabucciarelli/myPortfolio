@@ -9,9 +9,9 @@ import { OtraSkillService } from 'src/app/services/otra-skill.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  frontendSkillsData: any;
-  backendSkillsData: any;
-  otrasSkillsData: any;
+  frontendSkillsData: any = [];
+  backendSkillsData: any = [];
+  otrasSkillsData: any = [];
   constructor(private frontSkillService: FrontSkillService,private backSkillService: BackSkillService, private otraSkillService: OtraSkillService) { }
 
   ngOnInit(): void {

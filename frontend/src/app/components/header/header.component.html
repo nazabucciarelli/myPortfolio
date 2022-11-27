@@ -10,12 +10,16 @@
             <a *ngIf="header.urlig != null" [href]="header.urlgh" target="_blank"><i class="fa fa-github"></i></a>
             <a *ngIf="header.urlig != null" [href]="header.urllink" target="_blank"><i class="fa fa-linkedin"></i></a>
         </ol>
-        <button (click)="openDialog()" class="btn btn-light" id="btn-login"><i class='fas fa-sign-in-alt'></i> Log in</button>
+        <button (click)="openDialog()" *ngIf="!isLogged" class="btn btn-light" id="btn-login"><i class='fas fa-sign-in-alt'></i> Log in</button>
+        <button (click)="onLogout()" *ngIf="isLogged" class="btn btn-light" id="btn-logout"><i class='fas fa-sign-in-alt'></i> Log out</button>
     </div>
         
 </nav>
 <header>
     <div class="container-fluid banner">
+        <div id="welcome-msg">
+            <h2>¡Hola, bienvenido/a a mi portfolio!</h2>
+        </div>
     </div>
 </header>
 

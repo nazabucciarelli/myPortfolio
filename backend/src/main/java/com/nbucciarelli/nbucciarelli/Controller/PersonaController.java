@@ -9,6 +9,7 @@ import com.nbucciarelli.nbucciarelli.Entity.Persona;
 import com.nbucciarelli.nbucciarelli.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,19 +42,23 @@ public class PersonaController {
     public Persona getPersonaPerfil(){
         return iPersonaService.findPersona((long)1);
     }
-
+    
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")
     public String createPersona(@RequestBody Persona p) {
         iPersonaService.savePersona(p);
         return "Persona creada exitosamente.";
     }
-
+    
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/borrar/{id}")
     public String deletePersona(@PathVariable Long id) {
         iPersonaService.deletePersona(id);
         return "Persona borrada exitosamente.";
     }
 
+    
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/editar/1")
     public Persona editPersona( @RequestBody dtoPersona dtoPer) {
         Persona p = iPersonaService.findPersona((long)1);

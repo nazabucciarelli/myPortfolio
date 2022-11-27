@@ -14,8 +14,8 @@ header{
 }
 
 nav{
-    background: linear-gradient(to bottom, rgb(19, 173, 245),rgb(58, 107, 199));
-    box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.671);
+    background: linear-gradient(to bottom, rgb(80, 170, 212),rgb(48, 97, 189));
+    box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.200);
 }
 
 nav .btn-light{
@@ -74,9 +74,37 @@ div .socials{
     background-blend-mode: darken;
     height:70vh;
     box-shadow:  1px 20px 30px rgba(0, 0, 0, 0.671);
+    text-align: center;
 }
 
+#welcome-msg{
+    color: #ffffff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 
+#welcome-msg h2{
+    text-align: center;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    margin: 0 auto;
+    width: 35ch;
+
+    animation: typing 4s steps(35),
+    blink .5s infinite step-end alternate;
+     overflow:hidden;
+}
+
+@keyframes typing{
+    from { width: 0;}
+}
+
+@keyframes blink{
+    50% { border-color: transparent;}
+}
 
 .profilepic {
     border-radius: 100vh;
@@ -177,7 +205,7 @@ div .socials{
 }
 
 footer{
-    background: linear-gradient(to top, rgb(10, 105, 194), rgb(92, 136, 146));
+    background: linear-gradient(to bottom, rgb(80, 170, 212),rgb(48, 97, 189));
     height: 30vh;
     margin-top:5vh;
 }
