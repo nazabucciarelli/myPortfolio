@@ -1,7 +1,7 @@
 
 <div class="container-fluid info-section">
     <div class="container">
-        <h2 class="title-section header">Experiencia <a routerLink="addexp" type="button"><i class="fa fa-plus"></i></a></h2>
+        <h2 class="title-section header">Experiencia <a *ngIf="isLogged" routerLink="addexp" type="button"><i class="fa fa-plus"></i></a></h2>
         <div *ngIf="experiencia[0] == null" class="no-info-message">
             <p>¡Oops! No hay información sobre tu experiencia por aquí...</p>
         </div>
@@ -12,7 +12,7 @@
             <div class="col">
                 <h4>{{exp.nombre}}</h4>
                 <div class="icons-edit">
-                    <a routerLink="/editexp/{{exp.id}}" class="fa fa-pen rounded float-end delete-pen"></a>
+                    <a *ngIf="isLogged" routerLink="/editexp/{{exp.id}}" class="fa fa-pen rounded float-end delete-pen"></a>
                 </div>
                 <p class="period">{{exp.periodo}}</p>
                 <p class="work-description">{{exp.descripcion}}</p>

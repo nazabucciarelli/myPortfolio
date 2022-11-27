@@ -8,6 +8,7 @@ import com.nbucciarelli.nbucciarelli.Dto.dtoHeader;
 import com.nbucciarelli.nbucciarelli.Entity.Header;
 import com.nbucciarelli.nbucciarelli.Services.HeaderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,6 +35,7 @@ public class HeaderController {
         return headerServ.getHeaderById1();
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @PutMapping("/editar")
     public Header editHeader(@RequestBody dtoHeader dtoHe){
         Header currentHeader = headerServ.getHeaderById1();
@@ -44,6 +46,7 @@ public class HeaderController {
         return headerServ.saveHeader(currentHeader);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @PostMapping("/guardar")
     public Header saveHeader(@RequestBody Header he){
         return headerServ.saveHeader(he);

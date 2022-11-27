@@ -18,7 +18,7 @@ export class EditAboutComponent implements OnInit {
         console.log("works")
         this.pers = data
       }, err =>{
-        console.error("error")
+        console.error("error");
       }
     )
 
@@ -30,8 +30,8 @@ export class EditAboutComponent implements OnInit {
         console.log("works");
         this.router.navigate(['']);
       }, err => {
-        console.error("doesnt works");
-        this.router.navigate([''])
+        alert("Error: Debes llenar todos los campos/ Límite de caracteres excedido");
+        console.error("error");
       }
     )
   }

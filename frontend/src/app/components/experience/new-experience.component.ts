@@ -25,7 +25,9 @@ export class NewExperienceComponent implements OnInit {
     let exp = new Experiencia(this.nombre,this.descripcion,this.periodo,this.logo_empresa)
     this.expService.saveExperiencia(exp).subscribe(data=>{
       this.router.navigate([''])},err => {
-        this.router.navigate([''])});
+        alert("Error:  Debes llenar todos los campos/Límite de caracteres excedido");
+        console.error("error");
+      });
     
   }
 

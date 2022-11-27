@@ -32,6 +32,7 @@ import { NewBackSkillComponent } from './components/skills/new-back-skill.compon
 import { EditBackSkillComponent } from './components/skills/edit-back-skill.component';
 import { NewOtraSkillComponent } from './components/skills/new-otra-skill.component';
 import { EditOtraSkillComponent } from './components/skills/edit-otra-skill.component';
+import { interceptorProvider } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,7 @@ import { EditOtraSkillComponent } from './components/skills/edit-otra-skill.comp
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

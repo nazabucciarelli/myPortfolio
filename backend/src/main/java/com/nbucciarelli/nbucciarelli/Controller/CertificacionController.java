@@ -11,6 +11,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,12 +33,14 @@ public class CertificacionController {
     @Autowired
     CertificacionService certificacionServ;
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @PostMapping("/agregar")
     public ResponseEntity<?> addCertificacion(@RequestBody Certificacion cert){
         this.certificacionServ.saveCertificacion(cert);
         return new ResponseEntity("Certificacion agregada exitósamente",HttpStatus.OK);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @DeleteMapping("/borrar/{id}")
     public ResponseEntity<?> deleteCertificacion(@PathVariable Long id){
         this.certificacionServ.deleteCertificacionById(id);
@@ -54,6 +57,7 @@ public class CertificacionController {
         return this.certificacionServ.getCertificacionById(id);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @PutMapping("/editar/{id}")
     public Certificacion editCertificacion(@PathVariable Long id, @RequestBody dtoCertificacion nuevaCertificacion ){
         Certificacion cert = this.certificacionServ.getCertificacionById(id);

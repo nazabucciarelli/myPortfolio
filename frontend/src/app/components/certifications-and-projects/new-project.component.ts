@@ -26,7 +26,7 @@ export class NewProjectComponent implements OnInit {
         this.router.navigate([''])
         console.log("works")
       }, err => {
-        this.router.navigate([''])
+        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
         console.error("error")
       }
     )

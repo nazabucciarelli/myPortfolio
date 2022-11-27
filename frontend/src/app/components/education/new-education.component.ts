@@ -17,7 +17,6 @@ export class NewEducationComponent implements OnInit {
   constructor(private eduService:EducacionService, private router:Router) { }
 
   ngOnInit(): void {
-
   }
 
   onClose(): void{
@@ -27,7 +26,11 @@ export class NewEducationComponent implements OnInit {
   onCreate(): void{
     let edu = new Educacion(this.nombre,this.descripcion,this.periodo,this.logo_educacion)
     this.eduService.saveEducacion(edu).subscribe(
-      data => { this.router.navigate([''])}, err => {this.router.navigate([''])}
+      data => { this.router.navigate([''])}, 
+      err => { 
+      alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
+      console.error("error");
+    }
     )
   }
 

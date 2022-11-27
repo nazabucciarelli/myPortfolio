@@ -12,6 +12,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,13 +45,14 @@ public class EducacionController {
         return eduService.getEducacionById(id);
     }
     
-    
+    @PreAuthorize("hasRole('ADMIN')") 
     @PostMapping("/agregar")
     public ResponseEntity<?> addEducacion(@RequestBody Educacion edu){
         eduService.saveEducacion(edu);
         return new ResponseEntity("Educación agregada exitosamente",HttpStatus.OK);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @PutMapping("/editar/{id}")
     public ResponseEntity<?> editEducacion(@PathVariable Long id, @RequestBody dtoEducacion nuevaEdu){
         Educacion edu = eduService.getEducacionById(id).orElse(null);
@@ -70,6 +72,7 @@ public class EducacionController {
         return new ResponseEntity("Educación modificada exitosamente.",HttpStatus.OK);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @DeleteMapping("/borrar/{id}")
     public ResponseEntity<?> deleteEducacionById(@PathVariable Long id){
         eduService.deleteEducacionById(id);

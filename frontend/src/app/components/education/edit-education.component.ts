@@ -32,7 +32,7 @@ export class EditEducationComponent implements OnInit {
         this.router.navigate(['']);
         console.log("works")
       }, err => {
-        this.router.navigate(['']);
+        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
         console.error("error")
       }
     )
@@ -41,7 +41,10 @@ export class EditEducationComponent implements OnInit {
   onDelete(): void{
     this.eduService.deleteEducacion(this.id).subscribe(
       data => { this.router.navigate([''])}, err =>
-      { this.router.navigate([''])}
+      { 
+        alert("Error: Ha ocurrido un error");
+        console.error("error");
+      }
     )
   }
 }

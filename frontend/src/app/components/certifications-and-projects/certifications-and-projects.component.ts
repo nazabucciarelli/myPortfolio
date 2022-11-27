@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CertificationService } from 'src/app/services/certification.service';
 import { ProyectoService } from 'src/app/services/proyecto.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-certifications-and-projects',
@@ -10,9 +11,15 @@ import { ProyectoService } from 'src/app/services/proyecto.service';
 export class CertificationsAndProjectsComponent implements OnInit {
   certificationsData: any = [];
   projectsData: any = [];
-  constructor(private certService:CertificationService, private proyService:ProyectoService) { }
+  isLogged = false;
+  constructor(private certService:CertificationService, private proyService:ProyectoService, private tokenService:TokenService) { }
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
     this.certService.getAllCertificacion().subscribe(
       data => {
         this.certificationsData = data

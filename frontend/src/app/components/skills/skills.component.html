@@ -5,7 +5,7 @@
         <div class="col-lg-4 col-sm-12">
             <div class="container header">
                 <h4>Front-End</h4> 
-                <a routerLink="addfrontskill"><i class="fa fa-plus"></i></a>
+                <a *ngIf="isLogged" routerLink="addfrontskill"><i class="fa fa-plus"></i></a>
             </div>
             <div *ngIf="backendSkillsData[0] == null" class="no-info-message">
                 <p>¡Oops! No hay información sobre tus habilidades frontend por aquí...</p>
@@ -16,15 +16,14 @@
                         <h5><img [src]="skill.icono"> {{skill.nombre}}</h5>
                     </div>
                     <div class="col icons-edit">    
-                            <a routerLink="editfrontskill/{{skill.id}}"><i class="fa fa-pen"></i></a>
+                            <a *ngIf="isLogged" routerLink="editfrontskill/{{skill.id}}"><i class="fa fa-pen"></i></a>
                     </div>
                 </div>
                   <div class="progress">  
                     <div class="progress-bar bg-success" role="progressbar" [ngStyle]="{'width':skill.progreso + '%'}" aria-valuemin="0" aria-valuemax="100">
                         <div *ngIf="skill.progreso < 40">Básico</div>
-                        <div *ngIf="skill.progreso > 40 && skill.progreso < 60">Intermedio</div>
-                        <div *ngIf="skill.progreso > 60 && skill.progreso < 80">Intermedio - Avanzado</div>
-                        <div *ngIf="skill.progreso > 80"> Avanzado</div>
+                        <div *ngIf="skill.progreso > 40 && skill.progreso < 70">Intermedio</div>
+                        <div *ngIf="skill.progreso > 70"> Avanzado</div>
                     </div>
                 </div>
             </div>           
@@ -32,7 +31,7 @@
         <div class="col-lg-4 col-sm-12">
             <div class="container header">
                 <h4>Back-End</h4> 
-                <a routerLink="addbackskill"><i class="fa fa-plus"></i></a>
+                <a *ngIf="isLogged" routerLink="addbackskill"><i class="fa fa-plus"></i></a>
             </div>
             <div *ngIf="backendSkillsData[0] == null" class="no-info-message">
                 <p>¡Oops! No hay información sobre tus habilidades backend por aquí...</p>
@@ -43,15 +42,14 @@
                         <h5><img [src]="skill.icono"> {{skill.nombre}}</h5>
                     </div>
                     <div class="col icons-edit">    
-                            <a routerLink="editbackskill/{{skill.id}}"><i class="fa fa-pen"></i></a>
+                            <a *ngIf="isLogged" routerLink="editbackskill/{{skill.id}}"><i class="fa fa-pen"></i></a>
                     </div>
                 </div>
                   <div class="progress">  
                     <div class="progress-bar bg-success" role="progressbar" [ngStyle]="{'width':skill.progreso + '%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                         <div *ngIf="skill.progreso < 40">Básico</div>
-                        <div *ngIf="skill.progreso > 40 && skill.progreso < 60">Intermedio</div>
-                        <div *ngIf="skill.progreso > 60 && skill.progreso < 80">Intermedio - Avanzado</div>
-                        <div *ngIf="skill.progreso > 80"> Avanzado</div>
+                        <div *ngIf="skill.progreso > 40 && skill.progreso < 70">Intermedio</div>
+                        <div *ngIf="skill.progreso > 70"> Avanzado</div>
                     </div>
                   </div>
             </div>     
@@ -59,7 +57,7 @@
         <div class="col-lg-4 col-sm-12">
             <div class="container header">
                 <h4>Otras habilidades</h4> 
-                <a ><i routerLink="addotraskill" class="fa fa-plus"></i></a>
+                <a *ngIf="isLogged" routerLink="addotraskill"><i class="fa fa-plus"></i></a>
             </div>
             <div *ngIf="backendSkillsData[0] == null" class="no-info-message">
                 <p>¡Oops! No hay información sobre tus otras habilidades por aquí...</p>
@@ -70,15 +68,14 @@
                         <h5><img [src]="skill.icono"> {{skill.nombre}}</h5>
                     </div>
                     <div class="col icons-edit">    
-                            <a routerLink="editotraskill/{{skill.id}}"><i class="fa fa-pen"></i></a>
+                            <a *ngIf="isLogged" routerLink="editotraskill/{{skill.id}}"><i class="fa fa-pen"></i></a>
                     </div>
                 </div>
                   <div class="progress">  
                     <div class="progress-bar bg-success" role="progressbar" [ngStyle]="{'width':skill.progreso+ '%'} " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                         <div *ngIf="skill.progreso < 40">Básico</div>
-                        <div *ngIf="skill.progreso > 40 && skill.progreso < 60">Intermedio</div>
-                        <div *ngIf="skill.progreso > 60 && skill.progreso < 80">Intermedio - Avanzado</div>
-                        <div *ngIf="skill.progreso > 80"> Avanzado</div>
+                        <div *ngIf="skill.progreso > 40 && skill.progreso < 70">Intermedio</div>
+                        <div *ngIf="skill.progreso > 70"> Avanzado</div>
                     </div>
                   </div>
             </div>

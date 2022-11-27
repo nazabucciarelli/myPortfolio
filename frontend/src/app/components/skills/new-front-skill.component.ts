@@ -26,8 +26,8 @@ export class NewFrontSkillComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err =>{
-        this.router.navigate([''])
-      }
+        alert("Error:  Debes llenar todos los campos/Límite de caracteres excedido");
+        console.error("error");      }
     )
   }
 }

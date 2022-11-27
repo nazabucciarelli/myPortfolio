@@ -30,7 +30,8 @@ export class EditHeaderComponent implements OnInit {
         console.log("works");
         this.router.navigate([''])
       }, err =>{
-        console.log("doesn't works")
+        alert("Error: Debes llenar todos los campos")
+        console.log("error")
       }
     )
   }

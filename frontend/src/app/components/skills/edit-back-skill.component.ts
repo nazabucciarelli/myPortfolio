@@ -30,7 +30,8 @@ export class EditBackSkillComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err => {
-        this.router.navigate(['']);
+        alert("Error:  Debes llenar todos los campos/Límite de caracteres excedido");
+        console.error("error");
       }
     )
   }
@@ -40,7 +41,7 @@ export class EditBackSkillComponent implements OnInit {
       data =>{
         this.router.navigate([''])
       }, err => {
-        this.router.navigate([''])
+        console.error("error");
       }
     )
   }

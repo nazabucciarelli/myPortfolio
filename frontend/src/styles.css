@@ -91,9 +91,9 @@ div .socials{
     white-space: nowrap;
     border-right: 4px solid;
     margin: 0 auto;
-    width: 35ch;
+    width: 28ch;
 
-    animation: typing 4s steps(35),
+    animation: typing 3s steps(28),
     blink .5s infinite step-end alternate;
      overflow:hidden;
 }

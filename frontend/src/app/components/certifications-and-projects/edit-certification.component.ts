@@ -31,7 +31,7 @@ export class EditCertificationComponent implements OnInit {
         this.router.navigate(['']);
         console.log("works")
       }, err => {
-        this.router.navigate(['']);
+        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
         console.error("error")
       }
     )
@@ -39,8 +39,13 @@ export class EditCertificationComponent implements OnInit {
 
   onDelete():void{
     this.certificationServ.deleteCertificationById(this.id).subscribe(
-      data => { this.router.navigate([''])}, err =>
-      { this.router.navigate([''])}
+      data => { 
+        this.router.navigate([''])},
+         err =>
+      { 
+        alert("Error: Ha ocurrido un error");
+        console.error("error");
+      }
     )
   }
 

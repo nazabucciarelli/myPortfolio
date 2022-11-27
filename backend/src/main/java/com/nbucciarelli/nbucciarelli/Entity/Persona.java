@@ -26,29 +26,29 @@ public class Persona {
     private Long id;
     
     @NotNull
-    @Size(min = 0, max = 50, message = "Longitud incorrecta")
+    @Size(min = 1, max = 50, message = "Longitud incorrecta")
     private String nombre;
     
     @NotNull
-    @Size(min = 0, max = 50, message = "Longitud incorrecta")
+    @Size(min = 1, max = 50, message = "Longitud incorrecta")
     private String apellido;
 
     
     @NotNull
-    @Size(min = 0, max = 50, message = "Longitud incorrecta")
+    @Size(min = 1, max = 50, message = "Longitud incorrecta")
     private String img;
     
     @NotNull
-    @Size(min = 0, max = 50, message = "Longitud incorrecta")
+    @Size(min = 1, max = 50, message = "Longitud incorrecta")
     private String profesion;
     
     
     @NotNull
-    @Size(min = 0, max = 100, message = "Longitud incorrecta")
+    @Size(min = 1, max = 100, message = "Longitud incorrecta")
     private String urlcv;
      
      @NotNull
-    @Size(min = 0, max = 20000, message = "Longitud incorrecta")
+    @Size(min = 1, max = 20000, message = "Longitud incorrecta")
     private String sobremi;
 
     public Persona() {

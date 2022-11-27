@@ -26,7 +26,7 @@ export class EditProjectComponent implements OnInit {
       data =>{
         this.router.navigate([''])
       }, err => {
-        this.router.navigate([''])
+        alert("Error: Ha ocurrido un error");
       }
     )
   }
@@ -37,7 +37,7 @@ export class EditProjectComponent implements OnInit {
         this.router.navigate(['']);
         console.log('works');
       }, err => {
-        this.router.navigate(['']);
+        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
         console.error('error')
       }
     )

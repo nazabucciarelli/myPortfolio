@@ -11,6 +11,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,18 +43,21 @@ public class FrontSkillController {
         return frontSkillService.getFrontSkillById(id);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @PostMapping("/agregar")
     public ResponseEntity<?> addFrontSkill(@RequestBody FrontSkill frontSkill){
         frontSkillService.addFrontSkill(frontSkill);
         return new ResponseEntity("Skill de frontend agregada exitosamente.",HttpStatus.OK);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @DeleteMapping("/borrar/{id}")
     public ResponseEntity<?> deleteFrontSkill(@PathVariable Long id){
         frontSkillService.deleteFrontSkillById(id);
         return new ResponseEntity("Skill de frontend eliminada exitosamente.",HttpStatus.OK);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @PutMapping("/editar/{id}")
     public FrontSkill editFrontSkill(@PathVariable Long id, @RequestBody dtoSkill dtoFskill){
         FrontSkill fs = frontSkillService.getFrontSkillById(id);

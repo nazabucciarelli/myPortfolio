@@ -2,7 +2,7 @@
 <div class="row container-fluid">
     <img class="profilepic col-md-6" [src]="persona.img">
     <div class="col-md-6 info-profile">
-        <h2 *ngIf="persona.nombre != '' && persona.apellido != ''" id="name">{{persona.nombre}} {{persona.apellido}} <a routerLink="editsobremi" class="fa fa-pen"></a></h2>
+        <h2 *ngIf="persona.nombre != '' && persona.apellido != ''" id="name">{{persona.nombre}} {{persona.apellido}} <a *ngIf="isLogged" routerLink="editsobremi" class="fa fa-pen"></a></h2>
         <h2  id="name" *ngIf="persona.nombre == '' || persona.apellido == ''">Ingresa tu nombre completo <a routerLink="editsobremi" class="fa fa-pen"></a></h2>
         <h4 id="position">{{persona.profesion}}</h4>
         <p *ngIf="persona.profesion == '' ">Ingresa tu profesión</p>

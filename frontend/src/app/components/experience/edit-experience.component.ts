@@ -35,8 +35,8 @@ export class EditExperienceComponent implements OnInit {
         console.log("works") 
         this.router.navigate([''])},
          err => {
-        console.error("doesn't works")
-        this.router.navigate([''])
+        alert("Error:  Debes llenar todos los campos/Límite de caracteres excedido");
+        console.error("error");
       }
     )
   }
@@ -46,8 +46,8 @@ export class EditExperienceComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err =>{
+        alert("Error: ha ocurrido un error");
         console.error("error");
-        this.router.navigate(['']);
       }
     )
   }

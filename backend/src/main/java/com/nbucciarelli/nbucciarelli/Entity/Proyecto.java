@@ -26,22 +26,22 @@ public class Proyecto {
     
         
     @NotNull
-    @Size(min = 0, max = 50, message = "Longitud incorrecta")
+    @Size(min = 1, max = 50, message = "Longitud incorrecta")
     private String nombre;
         
     @NotNull
-    @Size(min = 0, max = 50, message = "Longitud incorrecta")
+    @Size(min = 1, max = 50, message = "Longitud incorrecta")
     private String fecha;
         
     @NotNull
-    @Size(min = 0, max = 250, message = "Longitud incorrecta")
+    @Size(min = 1, max = 250, message = "Longitud incorrecta")
     private String descripcion;
         
     @NotNull
-    @Size(min = 0, max = 400, message = "Longitud incorrecta")
+    @Size(min = 1, max = 400, message = "Longitud incorrecta")
     private String url_imagen;
         
     @NotNull
-    @Size(min = 0, max = 300, message = "Longitud incorrecta")
+    @Size(min = 1, max = 300, message = "Longitud incorrecta")
     private String github_link;
 }

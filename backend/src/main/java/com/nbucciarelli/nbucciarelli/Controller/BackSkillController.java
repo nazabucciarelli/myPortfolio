@@ -11,6 +11,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,23 +38,27 @@ public class BackSkillController {
         return backSkillService.getAllBackSkill();
     }
     
+    
     @GetMapping("/traer/{id}")
     public BackSkill getBackSkillById(@PathVariable Long id){
         return backSkillService.getBackSkillById(id);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @PostMapping("/agregar")
     public ResponseEntity<?> addBackSkill(@RequestBody BackSkill bSkill){
         backSkillService.addBackSkill(bSkill);
         return new ResponseEntity("Habilidad backend agregada exitosamente.",HttpStatus.OK);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @DeleteMapping("/borrar/{id}")
     public ResponseEntity<?> deleteBackSkillById(@PathVariable Long id){
         backSkillService.deleteBackSkillById(id);
         return new ResponseEntity("Habilidad backend eliminada exitosamente.",HttpStatus.OK);
     }
     
+    @PreAuthorize("hasRole('ADMIN')") 
     @PutMapping("/editar/{id}")
     public BackSkill editBackSkill(@PathVariable Long id, @RequestBody dtoSkill dtoBSkill){
         BackSkill bs = backSkillService.getBackSkillById(id);
