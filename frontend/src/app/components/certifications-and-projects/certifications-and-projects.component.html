@@ -4,14 +4,14 @@
             <div class="col sm-12 section">
                 <div class="container header">
                     <h2 class="title-section">Certificaciones</h2>
-                    <a *ngIf="isLogged" title="Agregar certificación" routerLink="addcertification"><i class="fa fa-plus"></i></a>
+                    <a *ngIf="isLogged" routerLink="addcertification"><i class="fa fa-plus"></i></a>
                 </div>
                 <p class="no-info-message" *ngIf="certificationsData[0] == null">¡Oops! No he encontrado certificaciones por aqui...</p>
                 <div *ngIf="certificationsData[0] != null" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div  class="carousel-inner" >
                         <div *ngFor="let cert of certificationsData">
                             <div *ngIf="cert == certificationsData[0]" class="carousel-item active">
-                                <div title="Editar certificación" class="container-pen">
+                                <div class="container-pen">
                                     <a *ngIf="isLogged" routerLink="editcertification/{{cert.id}}" class="fa fa-pen rounded float-end delete-cert"></a>
                                 </div>
                                 
@@ -21,7 +21,7 @@
                         <div *ngFor="let cert of certificationsData">
                             <div class="carousel-item" *ngIf="cert!= certificationsData[0]">
                                 <div class="container-pen">
-                                    <a *ngIf="isLogged" routerLink="editcertification/{{cert.id}}" class="fa fa-pen rounded float-end delete-cert"></a>
+                                    <a routerLink="editcertification/{{cert.id}}" class="fa fa-pen rounded float-end delete-cert"></a>
                                 </div>
                                 <img [src]="cert.url_certificado" class="d-block w-100" alt="Imagen de un certificado">
                               </div>
@@ -42,7 +42,7 @@
             <div class="col sm-12 section">
                 <div class="container header">
                     <h2 class="title-section">Proyectos</h2>
-                    <a *ngIf="isLogged" title="Agregar proyecto" routerLink="addproyecto"><i class="fa fa-plus"></i></a>
+                    <a *ngIf="isLogged" routerLink="addproyecto"><i class="fa fa-plus"></i></a>
                 </div>
                 <p class="no-info-message" *ngIf="projectsData[0] == null">¡Oops! No he encontrado proyectos por aqui...</p>
                 <div *ngIf="projectsData[0] != null" id="scroll">
@@ -57,7 +57,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">{{proyecto.nombre}} </h5>
                                             <div class="icons-edit">
-                                                <a *ngIf="isLogged" title="Editar proyecto" routerLink="editproyecto/{{proyecto.id}}" class="fa fa-pen rounded float-end delete-card"></a>
+                                                <a *ngIf="isLogged" routerLink="editproyecto/{{proyecto.id}}" class="fa fa-pen rounded float-end delete-card"></a>
                                             </div>
                                             <p class="card-subtitle text-muted">{{proyecto.fecha}}</p>
                                             <p class="card-text">{{proyecto.descripcion}}</p>
