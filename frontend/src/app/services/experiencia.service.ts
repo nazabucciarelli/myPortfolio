@@ -20,14 +20,14 @@ export class ExperienciaService {
    }
 
    public saveExperiencia(exp:Experiencia): Observable<any>{
-    return this.http.post<any>(this.url + 'agregar',exp)
+    return this.http.post(this.url + 'agregar',exp, {responseType: 'text'})
    }
 
    public editExperiencia(id:number,exp:Experiencia): Observable<any>{
-      return this.http.put<any>(this.url + `editar/${id}`,exp);
+      return this.http.put(this.url + `editar/${id}`,exp, {responseType: 'text'});
    }
 
    public deleteExperiencia(id:number): Observable<any>{
-    return this.http.delete<any>(this.url + `borrar/${id}`)
+    return this.http.delete(this.url + `borrar/${id}` ,{responseType: 'text'})
    }
 }

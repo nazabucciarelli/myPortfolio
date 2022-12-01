@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Experiencia } from 'src/app/model/experiencia.model';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
 import { TokenService } from 'src/app/services/token.service';
+import { NewExperienceComponent } from './new-experience.component';
 
 @Component({
   selector: 'app-experience',
@@ -11,7 +13,7 @@ import { TokenService } from 'src/app/services/token.service';
 export class ExperienceComponent implements OnInit {
   experiencia: Experiencia[] = [];
   isLogged = false;
-  constructor(private expService:ExperienciaService, private tokenService: TokenService) { }
+  constructor(private expService:ExperienciaService, private tokenService: TokenService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -26,6 +28,10 @@ export class ExperienceComponent implements OnInit {
     this.expService.getExperiencias().subscribe(
       data => {this.experiencia = data}
     )
+  }
+
+  openDialog(){
+    this.dialog.open(NewExperienceComponent);
   }
 
 }

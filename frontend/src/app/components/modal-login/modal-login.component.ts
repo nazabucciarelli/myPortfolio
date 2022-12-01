@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/model/login-usuario.model';
@@ -14,12 +15,19 @@ export class ModalLoginComponent implements OnInit {
   isLogged = false;
   isLogginFail = false;
   loginUsuario : LoginUsuario;
-  nombreUsuario : string = "";
+  nombreUsuario : string = '';
   password : string = "";
   roles: string[] = [];
   errMsg: string = "Ocurrió un error";
 
-  constructor(private dialog:MatDialog, private tokenService: TokenService, private authService: AuthService, private router: Router) { }
+  constructor(private dialog:MatDialog, private tokenService: TokenService, private authService: AuthService, private router: Router, private fb: FormBuilder) { }
+  
+  loginForm = this.fb.group({
+    nombreUsuario: ['', [Validators.required,Validators.maxLength(12)]],
+    password:['', [Validators.required]]
+  })
+
+    
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -27,9 +35,12 @@ export class ModalLoginComponent implements OnInit {
       this.isLogginFail = false;
       this.roles = this.tokenService.getAuthorities();
     }
+    this.loginForm.value
   }
 
   onLogin(): void{
+    this.nombreUsuario = this.loginForm.get('nombreUsuario').value;
+    this.password = this.loginForm.get('password').value;
     this.loginUsuario = new LoginUsuario(this.nombreUsuario,this.password);
     this.authService.login(this.loginUsuario).subscribe(data => {
       this.isLogged = true;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/services/persona.service';
@@ -10,7 +11,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 })
 export class EditAboutComponent implements OnInit {
   pers: Persona = new Persona("","","","","","")
-  constructor(private persService:PersonaService,private router: Router) { }
+  constructor(private persService:PersonaService,private router: Router, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.persService.getPersona().subscribe(
@@ -28,16 +29,17 @@ export class EditAboutComponent implements OnInit {
     this.persService.editPersona(this.pers).subscribe(
       data =>{
         console.log("works");
-        this.router.navigate(['']);
+        this.closeDialog();
+        window.location.reload();
       }, err => {
-        alert("Error: Debes llenar todos los campos/ Límite de caracteres excedido");
+        alert("Error:Debes llenar todos los campos/Límite de caracteres excedido");
         console.error("error");
       }
     )
   }
 
-  onClose():void{
-    this.router.navigate([''])
+  closeDialog():void{
+    this.dialog.closeAll();
   }
 
 }

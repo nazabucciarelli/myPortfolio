@@ -15,24 +15,26 @@ export class NewExperienceComponent implements OnInit {
   descripcion: String = ""
   periodo: String = ""
   logo_empresa: String = ""
-  constructor(private expService:ExperienciaService, private router:Router) {
+  constructor(private expService:ExperienciaService, private router:Router, private dialog: MatDialog) {
    }
 
   ngOnInit(): void {
   }
 
-  onCreate(): void{
+  onCreate(){
     let exp = new Experiencia(this.nombre,this.descripcion,this.periodo,this.logo_empresa)
     this.expService.saveExperiencia(exp).subscribe(data=>{
-      this.router.navigate([''])},err => {
-        alert("Error:  Debes llenar todos los campos/Límite de caracteres excedido");
+      this.dialog.closeAll();
+      window.location.reload();
+    },err => {
+        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
         console.error("error");
       });
     
   }
 
-  onClose():void{
-    this.router.navigate([''])
+  closeDialog(){
+    this.dialog.closeAll();
   }
 
 }
