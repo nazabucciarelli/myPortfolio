@@ -12,7 +12,7 @@
             <div class="col">
                 <h4>{{exp.nombre}}</h4>
                 <div class="icons-edit">
-                    <a *ngIf="isLogged" routerLink="/editexp/{{exp.id}}" class="fa fa-pen rounded float-end delete-pen"></a>
+                    <a *ngIf="isLogged" (click)="openEditDialog(exp)" class="fa fa-pen rounded float-end delete-pen"></a>
                 </div>
                 <p class="period">{{exp.periodo}}</p>
                 <p class="work-description">{{exp.descripcion}}</p>

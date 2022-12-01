@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Experiencia } from 'src/app/model/experiencia.model';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
 import { TokenService } from 'src/app/services/token.service';
+import { EditExperienceComponent } from './edit-experience.component';
 import { NewExperienceComponent } from './new-experience.component';
 
 @Component({
@@ -32,6 +33,13 @@ export class ExperienceComponent implements OnInit {
 
   openDialog(){
     this.dialog.open(NewExperienceComponent);
+  }
+
+  openEditDialog(exp:Experiencia){
+    this.dialog.open(EditExperienceComponent, {
+      disableClose: true,
+      data: exp
+    })
   }
 
 }
