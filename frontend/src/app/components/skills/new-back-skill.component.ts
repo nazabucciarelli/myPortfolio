@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill.model';
 import { BackSkillService } from 'src/app/services/back-skill.service';
@@ -12,13 +13,13 @@ export class NewBackSkillComponent implements OnInit {
   nombre: String;
   icono:String;
   progreso:number;
-  constructor(private router:Router, private backSkillService:BackSkillService) { }
+  constructor(private router:Router, private backSkillService:BackSkillService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  onClose():void{
-    this.router.navigate(['']);
+  closeDialog():void{
+    this.dialog.closeAll();
   }
 
   onCreate():void{
@@ -26,7 +27,7 @@ export class NewBackSkillComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err =>{
-        alert("Error:  Debes llenar todos los campos/Límite de caracteres excedido");
+        alert("Ha ocurrido un error");
         console.error("error");      }
     )
   }

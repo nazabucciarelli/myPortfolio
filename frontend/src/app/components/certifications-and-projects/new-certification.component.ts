@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Certification } from 'src/app/model/certification.model';
 import { CertificationService } from 'src/app/services/certification.service';
@@ -10,13 +11,13 @@ import { CertificationService } from 'src/app/services/certification.service';
 })
 export class NewCertificationComponent implements OnInit {
   url_certificado = ""
-  constructor(private certificationServ:CertificationService, private router: Router) { }
+  constructor(private certificationServ:CertificationService, private router: Router, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  onClose():void{
-    this.router.navigate([""])
+  closeDialog():void{
+    this.dialog.closeAll();
   }
 
   onCreate():void{
@@ -25,7 +26,7 @@ export class NewCertificationComponent implements OnInit {
         this.router.navigate([''])
         console.log("works!")
       }, err => {
-        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
+        alert("Ha ocurrido un error");
         console.error("error!")
       }
     )

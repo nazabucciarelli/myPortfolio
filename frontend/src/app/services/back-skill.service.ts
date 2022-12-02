@@ -18,14 +18,14 @@ export class BackSkillService {
   }
 
   public deleteBackSkillById(id:number):Observable<any>{
-    return this.http.delete<any>(this.url + "borrar/" + id);
+    return this.http.delete(this.url + "borrar/" + id,{responseType: 'text'});
   }
 
   public addBackSkill(backSkill: Skill): Observable<any>{
-    return this.http.post<any>(this.url + "agregar",backSkill);
+    return this.http.post(this.url + "agregar",backSkill,{responseType: 'text'});
   }
 
   public editBackSkill(id:number,backSkill:Skill): Observable<any>{
-    return this.http.put<any>(this.url + "editar/" + id,backSkill);
+    return this.http.put(this.url + "editar/" + id,backSkill,{responseType: 'text'});
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion.model';
 import { EducacionService } from 'src/app/services/educacion.service';
@@ -14,21 +15,24 @@ export class NewEducationComponent implements OnInit {
   descripcion: string ="";
   periodo: string = "";
   logo_educacion: string = "";
-  constructor(private eduService:EducacionService, private router:Router) { }
+  constructor(private eduService:EducacionService, private router:Router, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  onClose(): void{
-    this.router.navigate([''])
+  closeDialog(){
+    this.dialog.closeAll();
+    window.location.reload();
   }
 
   onCreate(): void{
     let edu = new Educacion(this.nombre,this.descripcion,this.periodo,this.logo_educacion)
     this.eduService.saveEducacion(edu).subscribe(
-      data => { this.router.navigate([''])}, 
+      data => { 
+        this.closeDialog();
+      }, 
       err => { 
-      alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
+      alert("Ha ocurrido un error");
       console.error("error");
     }
     )

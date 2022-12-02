@@ -19,14 +19,14 @@ export class CertificationService {
   }
 
   public saveCertification(cert:Certification): Observable<any>{
-    return this.http.post<any>(this.url + "agregar", cert);
+    return this.http.post(this.url + "agregar", cert,{responseType: 'text'});
   }
 
   public editCertification(id:number,cert:Certification):Observable<any>{
-    return this.http.put<any>(this.url + `editar/${id}`, cert)
+    return this.http.put(this.url + `editar/${id}`, cert,{responseType: 'text'})
   }
 
   public deleteCertificationById(id:number): Observable<any>{
-    return this.http.delete<any>(this.url + `borrar/${id}`)
+    return this.http.delete(this.url + `borrar/${id}`,{responseType: 'text'})
   }
 }

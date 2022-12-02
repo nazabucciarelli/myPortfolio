@@ -5,7 +5,7 @@
     
     <div class="container-fluid col-sm-11 ">
         <ol class="socials">
-            <i *ngIf="isLogged" routerLink="editheader" title="Editar enlaces" class="fa fa-link edit-button"></i>
+            <i *ngIf="isLogged" (click)="openEditLinksDialog()" title="Editar enlaces" class="fa fa-link edit-button"></i>
             <a *ngIf="header.urlig != null" [href]="header.urlig" target="_blank"><i class="fa fa-instagram"></i></a>
             <a *ngIf="header.urlig != null" [href]="header.urlgh" target="_blank"><i class="fa fa-github"></i></a>
             <a *ngIf="header.urlig != null" [href]="header.urllink" target="_blank"><i class="fa fa-linkedin"></i></a>

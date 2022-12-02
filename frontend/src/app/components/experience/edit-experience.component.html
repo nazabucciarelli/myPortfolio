@@ -26,7 +26,7 @@
             <input class="form-input" placeholder="Ingrese aquí la URL" type="text" id="logo_empresa" name="logo_empresa" [(ngModel)]="data.logo_empresa" required>
         </div>
         <div class="btn-container-modal">
-            <button class="btn btn-primary" (click)="onEdit()">
+            <button [disabled]="f.invalid"  class="btn btn-primary" (click)="onEdit()">
                 Editar
             </button>
             <button class="btn btn-danger m-1" (click)="onDelete()">

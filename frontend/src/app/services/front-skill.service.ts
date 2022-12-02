@@ -19,15 +19,15 @@ export class FrontSkillService {
   }
 
   public deleteSkillById(id:number):Observable<any>{
-    return this.http.delete<any>(this.url + "borrar/" + id);
+    return this.http.delete(this.url + "borrar/" + id,{responseType: 'text'});
   }
 
   public addFrontSkill(frontSkill: Skill): Observable<any>{
-    return this.http.post<any>(this.url + "agregar",frontSkill);
+    return this.http.post(this.url + "agregar",frontSkill,{responseType: 'text'});
   }
 
   public editFrontSkill(id:number,frontSkill:Skill): Observable<any>{
-    return this.http.put<any>(this.url + "editar/" + id,frontSkill);
+    return this.http.put(this.url + "editar/" + id,frontSkill,{responseType: 'text'});
   }
 
 }

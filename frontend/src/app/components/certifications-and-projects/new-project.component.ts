@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto.model';
 import { ProyectoService } from 'src/app/services/proyecto.service';
@@ -15,7 +16,7 @@ export class NewProjectComponent implements OnInit {
   url_imagen = "";
   github_link = "";
 
-  constructor(private proyService: ProyectoService, private router:Router) { }
+  constructor(private proyService: ProyectoService, private router:Router, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -26,14 +27,14 @@ export class NewProjectComponent implements OnInit {
         this.router.navigate([''])
         console.log("works")
       }, err => {
-        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
+        alert("Ha ocurrido un error");
         console.error("error")
       }
     )
   }
 
-  onClose():void{
-    this.router.navigate([''])
+  closeDialog(){
+    this.dialog.closeAll();
   }
 
 }

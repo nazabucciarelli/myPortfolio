@@ -27,7 +27,7 @@ export class NewExperienceComponent implements OnInit {
       this.dialog.closeAll();
       window.location.reload();
     },err => {
-        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
+        alert("Ha ocurrido un error");
         console.error("error");
       });
     

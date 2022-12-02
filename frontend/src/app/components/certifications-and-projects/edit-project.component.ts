@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto.model';
 import { ProyectoService } from 'src/app/services/proyecto.service';
@@ -11,10 +12,11 @@ import { ProyectoService } from 'src/app/services/proyecto.service';
 export class EditProjectComponent implements OnInit {
   proy: Proyecto = new Proyecto("","","","","");
   id:number = this.actRoute.snapshot.params['id'];
-  constructor(private router: Router, private actRoute: ActivatedRoute, private proyService:ProyectoService) { }
+  constructor(private router: Router, private actRoute: ActivatedRoute, private proyService:ProyectoService,
+    private dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: Proyecto) { }
 
   ngOnInit(): void {
-    this.proyService.getProyectoById(this.id).subscribe(
+    this.proyService.getProyectoById(this.data.id).subscribe(
       data =>{
         this.proy = data;
       }
@@ -22,28 +24,29 @@ export class EditProjectComponent implements OnInit {
   }
 
   onDelete():void{
-    this.proyService.deleteProyecto(this.id).subscribe(
+    this.proyService.deleteProyecto(this.data.id).subscribe(
       data =>{
-        this.router.navigate([''])
+        this.closeDialog();
       }, err => {
-        alert("Error: Ha ocurrido un error");
+        alert("Ha ocurrido un error");
       }
     )
   }
 
   onEdit():void{
-    this.proyService.editProyecto(this.id,this.proy).subscribe(
+    this.proyService.editProyecto(this.data.id,this.data).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.closeDialog();
         console.log('works');
       }, err => {
-        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
+        alert("Ha ocurrido un error");
         console.error('error')
       }
     )
   }
 
-  onClose():void{
-    this.router.navigate(['']);
+  closeDialog(){
+    this.dialog.closeAll();
+    window.location.reload();
   }
 }

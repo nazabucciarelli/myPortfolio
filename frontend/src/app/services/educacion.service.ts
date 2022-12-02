@@ -19,15 +19,15 @@ export class EducacionService {
   }
 
   public editEducacion(id:number,edu:Educacion):Observable<any>{
-    return this.http.put<any>(this.url + `editar/${id}`,edu);
+    return this.http.put(this.url + `editar/${id}`,edu,{responseType: 'text'});
   }
 
   public saveEducacion(edu:Educacion): Observable<any>{
-    return this.http.post<any>(this.url + 'agregar',edu)
+    return this.http.post(this.url + 'agregar',edu,{responseType: 'text'})
   }
 
   public deleteEducacion(id:number): Observable<any>{
-    return this.http.delete<any>(this.url + `borrar/${id}`)
+    return this.http.delete(this.url + `borrar/${id}`,{responseType: 'text'})
   }
 
 }

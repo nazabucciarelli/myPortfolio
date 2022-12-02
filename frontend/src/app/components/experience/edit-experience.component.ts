@@ -32,7 +32,7 @@ export class EditExperienceComponent implements OnInit {
          data => { 
           this.closeDialog();},
          err => {
-        alert("Error:  Debes llenar todos los campos/Límite de caracteres excedido");
+        alert("Ha ocurrido un error");
         console.error("error");
       }
     )
@@ -44,7 +44,7 @@ export class EditExperienceComponent implements OnInit {
         this.closeDialog();
         window.location.reload();
       }, err =>{
-        alert("Error: ha ocurrido un error");
+        alert("Ha ocurrido un error");
         console.error("error");
       }
     )

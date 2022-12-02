@@ -14,7 +14,7 @@ header{
 }
 
 nav{
-    background: linear-gradient(to bottom, rgb(80, 170, 212),rgb(48, 97, 189));
+    background: linear-gradient(to bottom, rgb(30, 32, 32),rgb(56, 56, 56));
     box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.200);
 }
 
@@ -150,7 +150,7 @@ div .socials{
 .delete-cert{
     padding: 10px;
     color: rgb(101, 105, 109);
-    z-index: 10000;
+    z-index: 10;
     position: absolute;
     transition: 0.3s;
 }
@@ -205,9 +205,12 @@ div .socials{
 }
 
 footer{
-    background: linear-gradient(to bottom, rgb(80, 170, 212),rgb(48, 97, 189));
+    background: linear-gradient(to bottom, rgb(30, 32, 32),rgb(56, 56, 56));
     height: 30vh;
     margin-top:5vh;
+
+    box-shadow: 0 -10px 20px rgba(0,0,0,0.5);
+
 }
 
 footer p{
@@ -329,6 +332,17 @@ footer p{
 }
 
 .icons-edit a:hover{
+    cursor: pointer;
+    color: #858585;
+    transition: 0.3s;
+}
+
+.icons-edit i{
+    color: rgb(101, 105, 109);
+    transition: 0.3s;
+}
+
+.icons-edit i:hover{
     cursor: pointer;
     color: #858585;
     transition: 0.3s;

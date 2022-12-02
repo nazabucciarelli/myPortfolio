@@ -4,6 +4,7 @@ import { ModalLoginComponent } from '../modal-login/modal-login.component';
 import { HeaderService } from 'src/app/services/header.service';
 import { Header } from 'src/app/model/header.model';
 import { TokenService } from 'src/app/services/token.service';
+import { EditHeaderComponent } from './edit-header.component';
 
 @Component({
   selector: 'app-header',
@@ -33,7 +34,11 @@ export class HeaderComponent implements OnInit {
   }
 
   openDialog(){
-    this.dialog.open(ModalLoginComponent)
+    this.dialog.open(ModalLoginComponent);
   }
 
+  openEditLinksDialog(){
+    this.dialog.open(EditHeaderComponent, {disableClose: true}
+      );
+  }
 }

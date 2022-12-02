@@ -55,7 +55,7 @@ export class ModalLoginComponent implements OnInit {
       this.isLogged = false;
       this.isLogginFail = true;
       console.log(this.errMsg);
-      alert("Ocurrió un error");
+      alert("Ha ocurrido un error");
     } 
     );
   }

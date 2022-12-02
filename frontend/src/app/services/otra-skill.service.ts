@@ -18,14 +18,14 @@ export class OtraSkillService {
   }
 
   public deleteOtraSkillById(id:number):Observable<any>{
-    return this.http.delete<any>(this.url + "borrar/" + id);
+    return this.http.delete(this.url + "borrar/" + id,{responseType: 'text'});
   }
 
   public addOtraSkill(otraSkill: Skill): Observable<any>{
-    return this.http.post<any>(this.url + "agregar",otraSkill);
+    return this.http.post(this.url + "agregar",otraSkill,{responseType: 'text'});
   }
 
   public editOtraSkill(id:number,otraSkill:Skill): Observable<any>{
-    return this.http.put<any>(this.url + "editar/" + id,otraSkill);
+    return this.http.put(this.url + "editar/" + id,otraSkill,{responseType: 'text'});
   }
 }

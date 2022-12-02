@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill.model';
 import { OtraSkillService } from 'src/app/services/otra-skill.service';
@@ -12,13 +13,13 @@ export class NewOtraSkillComponent implements OnInit {
   nombre: String;
   icono:String;
   progreso:number;
-  constructor(private router:Router, private otraSkillService:OtraSkillService) { }
+  constructor(private router:Router, private otraSkillService:OtraSkillService, private dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  onClose():void{
-    this.router.navigate(['']);
+  closeDialog():void{
+    this.dialog.closeAll();
   }
 
   onCreate():void{
@@ -26,7 +27,7 @@ export class NewOtraSkillComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err =>{
-        alert("Error:  Debes llenar todos los campos/Límite de caracteres excedido");
+        alert("Ha ocurrido un error");
         console.error("error");
       }
     )

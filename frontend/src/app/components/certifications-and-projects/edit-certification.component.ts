@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Certification } from 'src/app/model/certification.model';
 import { CertificationService } from 'src/app/services/certification.service';
@@ -11,39 +12,42 @@ import { CertificationService } from 'src/app/services/certification.service';
 export class EditCertificationComponent implements OnInit {
   cert: Certification = new Certification("");
   id:number = this.actRoute.snapshot.params['id'];
-  constructor(private router: Router, private actRoute:ActivatedRoute, private certificationServ:CertificationService) { }
+  constructor(private router: Router, private actRoute:ActivatedRoute, private certificationServ:CertificationService,
+     private dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: Certification) { }
 
   ngOnInit(): void {
-    this.certificationServ.getCertificationById(this.id).subscribe(
+    this.certificationServ.getCertificationById(this.data.id).subscribe(
       data =>{
         this.cert = data;
       }
     )
   }
 
-  onClose():void{
-    this.router.navigate([''])
+  closeDialog(){
+    this.dialog.closeAll();
+    window.location.reload();
   }
 
   onEdit():void{
-    this.certificationServ.editCertification(this.id,this.cert).subscribe(
+    this.certificationServ.editCertification(this.data.id,this.data).subscribe(
       data=> {
-        this.router.navigate(['']);
+        this.closeDialog()
         console.log("works")
       }, err => {
-        alert("Error: Debes llenar todos los campos/Límite de caracteres excedido");
+        alert("Ha ocurrido un error");
         console.error("error")
       }
     )
   }
 
   onDelete():void{
-    this.certificationServ.deleteCertificationById(this.id).subscribe(
+    this.certificationServ.deleteCertificationById(this.data.id).subscribe(
       data => { 
-        this.router.navigate([''])},
+        this.closeDialog();
+        console.log("works");},
          err =>
       { 
-        alert("Error: Ha ocurrido un error");
+        alert("Ha ocurrido un error");
         console.error("error");
       }
     )

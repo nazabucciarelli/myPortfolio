@@ -16,6 +16,6 @@ export class HeaderService {
   }
 
   public editHeader(he:Header):Observable<any>{
-    return this.http.put(this.url + "editar",he);
+    return this.http.put(this.url + "editar",he,{responseType: 'text'});
   }
 }

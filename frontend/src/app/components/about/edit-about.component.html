@@ -36,7 +36,7 @@
         
 
         <div class="btn-container-modal">
-            <button class="btn btn-primary" (click)="onEdit()">
+            <button [disabled]="f.invalid" class="btn btn-primary" (click)="onEdit()">
                 Editar
             </button>
         </div>

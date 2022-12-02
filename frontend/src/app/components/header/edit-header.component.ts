@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Header } from 'src/app/model/header.model';
 import { HeaderService } from 'src/app/services/header.service';
@@ -10,7 +11,7 @@ import { HeaderService } from 'src/app/services/header.service';
 })
 export class EditHeaderComponent implements OnInit {
   header: Header = new Header("","","");
-  constructor(private headerServ:HeaderService, private router:Router) { }
+  constructor(private headerServ:HeaderService, private router:Router, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.headerServ.getHeader().subscribe(
@@ -20,17 +21,18 @@ export class EditHeaderComponent implements OnInit {
     )
   }
 
-  onClose():void{
-    this.router.navigate(['']);
+  closeDialog(){
+    this.dialog.closeAll();
+    window.location.reload();
   }
 
   onEdit():void{
     this.headerServ.editHeader(this.header).subscribe(
       data =>{
         console.log("works");
-        this.router.navigate([''])
+        this.closeDialog();
       }, err =>{
-        alert("Error: Debes llenar todos los campos")
+        alert("Ha ocurrido un error");
         console.log("error")
       }
     )

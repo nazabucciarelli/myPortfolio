@@ -19,14 +19,14 @@ export class ProyectoService {
   }
 
   public addProyecto(proy : Proyecto): Observable<any>{
-    return this.http.post<any>(this.url + "agregar",proy);
+    return this.http.post(this.url + "agregar",proy,{responseType: 'text'});
   }
 
   public deleteProyecto(id:number): Observable<any>{
-    return this.http.delete<any>(this.url + "borrar/" + id);
+    return this.http.delete(this.url + "borrar/" + id,{responseType: 'text'});
   }
 
   public editProyecto(id:number,proy: Proyecto): Observable<any>{
-    return this.http.put(this.url + "editar/" + id,proy);
+    return this.http.put(this.url + "editar/" + id,proy,{responseType: 'text'});
   }
 }

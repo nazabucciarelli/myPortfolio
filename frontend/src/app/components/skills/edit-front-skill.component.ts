@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill.model';
 import { FrontSkillService } from 'src/app/services/front-skill.service';
@@ -11,7 +12,8 @@ import { FrontSkillService } from 'src/app/services/front-skill.service';
 export class EditFrontSkillComponent implements OnInit {
   frontSkill : Skill = new Skill("","",0);
   id:number = this.ActRoute.snapshot.params['id'];
-  constructor(private frontSkillService:FrontSkillService, private router: Router, private ActRoute:ActivatedRoute) { }
+  constructor(private frontSkillService:FrontSkillService, private router: Router, private ActRoute:ActivatedRoute, private dialog:MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data: Skill) { }
 
   ngOnInit(): void {
     this.frontSkillService.getFrontSkillById(this.id).subscribe(
@@ -21,26 +23,28 @@ export class EditFrontSkillComponent implements OnInit {
     )
   }
 
-  onClose():void {
-    this.router.navigate(['']);
+  closeDialog(){
+    this.dialog.closeAll();
+    window.location.reload();
   }
 
   onEdit():void{
-    this.frontSkillService.editFrontSkill(this.id,this.frontSkill).subscribe(
+    this.frontSkillService.editFrontSkill(this.data.id,this.data).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.closeDialog();
       }, err => {
-        alert("Error:  Debes llenar todos los campos/Límite de caracteres excedido");
+        alert("Ha ocurrido un error");
         console.error("error");
       }
     )
   }
 
   onDelete():void{
-    this.frontSkillService.deleteSkillById(this.id).subscribe(
+    this.frontSkillService.deleteSkillById(this.data.id).subscribe(
       data =>{
-        this.router.navigate([''])
+        this.closeDialog();
       }, err => {
+        alert("Ha ocurrido un error");
         console.error("error");
       }
     )
