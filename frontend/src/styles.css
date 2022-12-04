@@ -27,6 +27,7 @@ nav .btn-light{
 .navbar{
     padding:5px;
     margin: 0;
+    height: 80px;
 }
 
 
@@ -45,6 +46,8 @@ div .socials i{
     padding: 5px;
     color: rgb(230, 222, 222);
     font-size: 20px;
+    transition: 0.5s;
+
 }
 
 div .socials .fa-link{
@@ -56,13 +59,13 @@ div .socials .fa-link{
 div .socials i:hover{
     color: rgba(230, 222, 222, 0.678);
     cursor: pointer;
+    transition: 0.5s;
 }
 
 div .socials{
    margin: auto;
    margin-right: 20px;
 }
-
 
 .banner{
     background-image: url(https://images.unsplash.com/photo-1526374870839-e155464bb9b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
@@ -195,7 +198,9 @@ div .socials{
     font-style: italic;
     font-family: 'Roboto', sans-serif;
 }
-
+.header h4{
+    color: #757575;
+}
 .section{
     
     border-radius: 5vh;
@@ -409,6 +414,27 @@ footer p{
         font-size: 14px;
     }
 
+    .profilepic{
+        width:210px;
+        height: 200px;
+    }
+
+    .about-section{
+        margin:0;
+    }
+
+    #welcome-msg h2{
+        font-size: 20px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+    .item-progress h5{
+        font-size:15px;
+    }
+
     .work-description{
         font-size: 13px;
     }
@@ -422,7 +448,45 @@ footer p{
   
 }
 /* Medium devices (landscape tablets, 768px and 1024px) */
-@media only screen and (min-width: 768px) and (max-width: 1024px){}
+@media only screen and (min-width: 480px) and (max-width: 600px){
+    .about-section{
+        margin:0;
+    }
+
+    .profilepic{
+        width: 360px;
+        height: 340px;
+    }
+
+}
+
+@media only screen and (max-width: 300px){
+    #welcome-msg h2{
+        font-size: 14px;
+    }
+
+    #btn-logout{
+
+        font-size: 11px;
+    }
+
+    .profilepic{
+        width: 145px;
+        height: 130px;
+    }
+
+    .info-profile h2{
+        font-size: 20px;
+    }
+
+    .info-profile a{
+        font-size: 12px;
+    }
+
+    .about p{
+        font-size: 12px;
+    }
+}
 
 /* Largue devices ( landscape desktop, 1025px and 1200px) */
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {}
