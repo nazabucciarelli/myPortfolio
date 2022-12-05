@@ -7,7 +7,7 @@ import { Header } from '../model/header.model';
   providedIn: 'root'
 })
 export class HeaderService {
-  url = "http://localhost:8080/header/"
+  url = "https://portfolio-backend-production-b985.up.railway.app/header/"
   constructor(private http:HttpClient) { 
   }
 

@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario.model';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = "http://localhost:8080/auth/";
+  authURL = "https://portfolio-backend-production-b985.up.railway.app/auth/";
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{

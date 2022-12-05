@@ -12,7 +12,6 @@
             
         </div>
         <p style="color: rgb(230, 70, 70);" *ngIf="loginForm.get('nombreUsuario')?.touched && loginForm.get('nombreUsuario')?.errors?.['required']">Este campo es requerido</p>
-        <p style="color: rgb(230, 70, 70);" *ngIf="loginForm.get('nombreUsuario')?.touched && loginForm.get('nombreUsuario')?.errors?.['maxlength']">La longitud no debe superar los 12 caracteres</p>
         <div class="form-group">
             <label for="password"><i class="fa fa-lock"></i> Contraseña</label>
             <input formControlName="password" class="form-input" type="password" id="password" name="password" placeholder="Ingrese aquí su contraseña">

@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto.model';
   providedIn: 'root'
 })
 export class ProyectoService {
-  url = "http://localhost:8080/proyecto/";
+  url = "https://portfolio-backend-production-b985.up.railway.app/proyecto/";
   constructor(private http:HttpClient) { }
 
   public getAllProyecto(): Observable<Proyecto[]>{

@@ -7,7 +7,7 @@ import { Skill } from '../model/skill.model';
   providedIn: 'root'
 })
 export class OtraSkillService {
-  url = "http://localhost:8080/otraskill/"
+  url = "https://portfolio-backend-production-b985.up.railway.app/otraskill/"
   constructor(private http:HttpClient) { }
   public getAllOtraSkill(): Observable<Skill[]>{
     return this.http.get<Skill[]>(this.url + "traer");

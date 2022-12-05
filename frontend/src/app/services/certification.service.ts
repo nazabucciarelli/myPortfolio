@@ -7,7 +7,7 @@ import { Certification } from '../model/certification.model';
   providedIn: 'root'
 })
 export class CertificationService {
-  url = "http://localhost:8080/certificacion/"
+  url = "https://portfolio-backend-production-b985.up.railway.app/certificacion/"
   constructor(private http: HttpClient) { }
 
   public getAllCertificacion(): Observable<Certification[]>{
