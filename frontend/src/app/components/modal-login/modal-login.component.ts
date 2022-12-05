@@ -23,7 +23,7 @@ export class ModalLoginComponent implements OnInit {
   constructor(private dialog:MatDialog, private tokenService: TokenService, private authService: AuthService, private router: Router, private fb: FormBuilder) { }
   
   loginForm = this.fb.group({
-    nombreUsuario: ['', [Validators.required,Validators.maxLength(12)]],
+    nombreUsuario: ['', [Validators.required,Validators.maxLength(20)]],
     password:['', [Validators.required]]
   })
 
