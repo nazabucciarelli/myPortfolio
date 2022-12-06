@@ -415,8 +415,8 @@ footer p{
     }
 
     .profilepic{
-        width:210px;
-        height: 200px;
+        width:220px;
+        height: 210px;
     }
 
     .about-section{
@@ -444,6 +444,9 @@ footer p{
     .logo{display: none;}
     .info-profile{
         text-align: center;
+    }
+    .banner{
+        background-attachment: initial;
     }
   
 }
