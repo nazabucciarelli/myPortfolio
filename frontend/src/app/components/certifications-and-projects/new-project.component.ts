@@ -24,7 +24,7 @@ export class NewProjectComponent implements OnInit {
   onCreate():void {
     this.proyService.addProyecto(new Proyecto(this.nombre,this.fecha,this.descripcion,this.url_imagen,this.github_link)).subscribe(
       data => {
-        this.router.navigate([''])
+        this.closeDialog();
         console.log("works")
       }, err => {
         alert("Ha ocurrido un error");
@@ -33,8 +33,9 @@ export class NewProjectComponent implements OnInit {
     )
   }
 
-  closeDialog(){
+  closeDialog():void{
     this.dialog.closeAll();
+    window.location.reload();
   }
 
 }

@@ -18,12 +18,13 @@ export class NewCertificationComponent implements OnInit {
 
   closeDialog():void{
     this.dialog.closeAll();
+    window.location.reload();
   }
 
   onCreate():void{
     this.certificationServ.saveCertification(new Certification(this.url_certificado)).subscribe(
       data => {
-        this.router.navigate([''])
+        this.closeDialog();
         console.log("works!")
       }, err => {
         alert("Ha ocurrido un error");
@@ -31,4 +32,6 @@ export class NewCertificationComponent implements OnInit {
       }
     )
   }
+
+
 }

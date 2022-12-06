@@ -24,17 +24,17 @@ export class NewExperienceComponent implements OnInit {
   onCreate(){
     let exp = new Experiencia(this.nombre,this.descripcion,this.periodo,this.logo_empresa)
     this.expService.saveExperiencia(exp).subscribe(data=>{
-      this.dialog.closeAll();
+      this.closeDialog();
       window.location.reload();
     },err => {
         alert("Ha ocurrido un error");
         console.error("error");
-      });
-    
+      });    
   }
 
   closeDialog(){
     this.dialog.closeAll();
+    window.location.reload();
   }
 
 }

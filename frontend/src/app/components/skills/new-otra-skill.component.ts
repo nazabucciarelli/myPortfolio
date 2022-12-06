@@ -20,12 +20,13 @@ export class NewOtraSkillComponent implements OnInit {
 
   closeDialog():void{
     this.dialog.closeAll();
+    window.location.reload();
   }
 
   onCreate():void{
     this.otraSkillService.addOtraSkill(new Skill(this.nombre,this.icono,this.progreso)).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.closeDialog()
       }, err =>{
         alert("Ha ocurrido un error");
         console.error("error");

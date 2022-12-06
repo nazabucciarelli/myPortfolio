@@ -20,12 +20,13 @@ export class NewBackSkillComponent implements OnInit {
 
   closeDialog():void{
     this.dialog.closeAll();
+    window.location.reload();
   }
 
   onCreate():void{
     this.backSkillService.addBackSkill(new Skill(this.nombre,this.icono,this.progreso)).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.closeDialog()
       }, err =>{
         alert("Ha ocurrido un error");
         console.error("error");      }
