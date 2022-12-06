@@ -27,8 +27,9 @@ https://nbucciarelli.web.app/
   <li>MySQL</li>
   <li>Firebase</li>
   <li>Clevercloud</li>
-  <li>Heroku</li>
+  <li>Railway</li>
   <li>Git</li>
+  <li>Images server: https://postimages.org/</li>
 </ul>
 
 <h1> 💡 Author </h1>
