@@ -12,9 +12,10 @@
     <artifactId>nbucciarelli</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>nbucciarelli</name>
+    <packaging>jar</packaging>
     <description>Backend para portfolio web personal.</description>
     <properties>
-        <java.version>19</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>

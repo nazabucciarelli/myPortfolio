@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping ("frontskill")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://nbucciarelli.web.app")
 public class FrontSkillController {
     @Autowired
     FrontSkillService frontSkillService;

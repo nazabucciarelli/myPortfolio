@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping ("backskill")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://nbucciarelli.web.app")
 public class BackSkillController {
     @Autowired
     BackSkillService backSkillService;

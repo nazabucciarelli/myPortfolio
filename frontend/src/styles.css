@@ -186,7 +186,9 @@ div .socials{
 }
 
 
-
+.picsum-img-wrapper{
+    margin:0;
+}
 .title-section{
     text-align: center;
     padding: 2vh;
@@ -224,14 +226,6 @@ footer p{
     top: 15vh;
     color: azure;
     font-family: 'Roboto', sans-serif;
-}
-
-.carousel-item{
-    padding: 1vh;
-}
-.carousel-control-next,
-.carousel-control-prev {
-    filter: invert(100%);
 }
 
 #scroll{
@@ -415,8 +409,8 @@ footer p{
     }
 
     .profilepic{
-        width:220px;
-        height: 210px;
+        width:230px;
+        height: 220px;
     }
 
     .about-section{
@@ -434,7 +428,6 @@ footer p{
     .item-progress h5{
         font-size:15px;
     }
-
     .work-description{
         font-size: 13px;
     }
