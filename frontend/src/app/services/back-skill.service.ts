@@ -7,7 +7,7 @@ import { Skill } from '../model/skill.model';
   providedIn: 'root'
 })
 export class BackSkillService {
-  url = "https://portfolio-backend-production-b985.up.railway.app/backskill/"
+  url = "https://api-nazabucciarelli.koyeb.app/backskill/"
   constructor(private http:HttpClient) { }
   public getAllBackSkill(): Observable<Skill[]>{
     return this.http.get<Skill[]>(this.url + "traer");

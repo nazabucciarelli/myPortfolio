@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto.model';
   providedIn: 'root'
 })
 export class ProyectoService {
-  url = "https://portfolio-backend-production-b985.up.railway.app/proyecto/";
+  url = "https://api-nazabucciarelli.koyeb.app/proyecto/";
   constructor(private http:HttpClient) { }
 
   public getAllProyecto(): Observable<Proyecto[]>{

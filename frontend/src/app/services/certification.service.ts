@@ -7,7 +7,7 @@ import { Certification } from '../model/certification.model';
   providedIn: 'root'
 })
 export class CertificationService {
-  url = "https://portfolio-backend-production-b985.up.railway.app/certificacion/"
+  url = "https://api-nazabucciarelli.koyeb.app/certificacion/"
   constructor(private http: HttpClient) { }
 
   public getAllCertificacion(): Observable<Certification[]>{

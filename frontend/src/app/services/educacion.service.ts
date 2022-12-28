@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion.model';
   providedIn: 'root'
 })
 export class EducacionService {
-  url = "https://portfolio-backend-production-b985.up.railway.app/educacion/"
+  url = "https://api-nazabucciarelli.koyeb.app/educacion/"
   constructor(private http: HttpClient) { }
 
   public getAllEducacion(): Observable<Educacion[]>{

@@ -7,7 +7,7 @@ import { Skill } from '../model/skill.model';
   providedIn: 'root'
 })
 export class FrontSkillService {
-  url = "https://portfolio-backend-production-b985.up.railway.app/frontskill/"
+  url = "https://api-nazabucciarelli.koyeb.app/frontskill/"
   constructor(private http:HttpClient) { }
 
   public getAllFrontSkill(): Observable<Skill[]>{

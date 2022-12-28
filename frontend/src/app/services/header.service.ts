@@ -7,7 +7,7 @@ import { Header } from '../model/header.model';
   providedIn: 'root'
 })
 export class HeaderService {
-  url = "https://portfolio-backend-production-b985.up.railway.app/header/"
+  url = "https://api-nazabucciarelli.koyeb.app/header/"
   constructor(private http:HttpClient) { 
   }
 
