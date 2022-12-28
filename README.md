@@ -1,12 +1,9 @@
-<h1 align="center"> Nazareno Bucciarelli's Web Portfolio</h1>
+<h1 align="center"> Frontend for Web Portfolio</h1>
 
 <h1> 📃 Project's description </h1>
 
 Web App made for a programming course from Argentina. The web has several sections in which the admin will be able of create, edit or delete the information in those, only if is logged in. If you are not logged in, you will be able to only read the information.
 
-<h4 align="center">
-:construction: Project under construction! :construction:
-</h4>
 
 <h1> :hammer: Project functionalities </h1>
 
@@ -17,19 +14,15 @@ Web App made for a programming course from Argentina. The web has several sectio
 
 <h1> 📁 Access to project </h1>
 
-https://nbucciarelli.web.app/
+https://n-bucciarelli.web.app/
 
 <h1> ✔ Used technologies </h1>
 
 <ul>
-  <li>Spring Boot</li>
   <li>Angular</li>
-  <li>MySQL</li>
   <li>Firebase</li>
-  <li>Clevercloud</li>
-  <li>Railway</li>
   <li>Git</li>
-  <li>Images server: https://postimages.org/</li>
+  <li>Bootstrap</li>
 </ul>
 
 <h1> 💡 Author </h1>
