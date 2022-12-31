@@ -212,15 +212,18 @@ div .socials{
 
 }
 
+
 footer{
+    margin-top: 40px;
     background: #191e26;
-    height: 20vh;
+    height: 25vh;
+    box-shadow:  0px -10px 40px rgba(30, 20, 20, 0.493);
 }
 
 footer p{
     text-align: center;
     position: relative;
-    top:30px;
+    top:90px;
     color: azure;
     font-family: 'Roboto', sans-serif;
 }
