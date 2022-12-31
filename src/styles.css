@@ -14,7 +14,7 @@ header{
 }
 
 nav{
-    background: linear-gradient(to bottom, rgb(30, 32, 32),rgb(56, 56, 56));
+    background: #191e26;
     box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.200);
 }
 
@@ -52,7 +52,7 @@ div .socials i{
 
 div .socials .fa-link{
     color:#a0a0a0;
-    
+
 }
 
 
@@ -86,6 +86,7 @@ div .socials{
     display: flex;
     align-items: center;
 }
+
 
 #welcome-msg h2{
     text-align: center;
@@ -137,7 +138,7 @@ div .socials{
 }
 
 .info-section {
-    
+
     margin-top:2vh;
 }
 
@@ -204,26 +205,22 @@ div .socials{
     color: #757575;
 }
 .section{
-    
+
     border-radius: 5vh;
     margin: 10px;
     text-align: center;
-    
+
 }
 
 footer{
-    background: linear-gradient(to bottom, rgb(30, 32, 32),rgb(56, 56, 56));
-    height: 30vh;
-    margin-top:5vh;
-
-    box-shadow: 0 -10px 20px rgba(0,0,0,0.5);
-
+    background: #191e26;
+    height: 20vh;
 }
 
 footer p{
     text-align: center;
     position: relative;
-    top: 15vh;
+    top:30px;
     color: azure;
     font-family: 'Roboto', sans-serif;
 }
@@ -297,7 +294,7 @@ footer p{
 
 #login-title{
     font-size: 22px;
-  
+
 }
 
 #login-description{
@@ -312,7 +309,7 @@ footer p{
 #btn-login-close{
     background-color: #ffffff;
     border:none;
-    
+
 }
 
 .card-text{
@@ -363,7 +360,7 @@ footer p{
 }
 
 .container-pen{
-    text-align: end; 
+    text-align: end;
     width: 90%;
 }
 
@@ -441,7 +438,7 @@ footer p{
     .banner{
         background-attachment: initial;
     }
-  
+
 }
 /* Medium devices (landscape tablets, 768px and 1024px) */
 @media only screen and (min-width: 480px) and (max-width: 600px){
