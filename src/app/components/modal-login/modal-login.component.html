@@ -8,16 +8,16 @@
     <form [formGroup]="loginForm" id="login" #f="ngForm" novalidate (ngSubmit)="onLogin()">
         <div class="form-group">
             <label for="nombreUsuario"><i class="fa fa-user"></i> User</label>
-            <input formControlName="nombreUsuario" class="form-input" type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Ingrese aquí su nombre de usuario" >
+            <input formControlName="nombreUsuario" class="form-input" type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Insert here your usernamr" >
             
         </div>
-        <p style="color: rgb(230, 70, 70);" *ngIf="loginForm.get('nombreUsuario')?.touched && loginForm.get('nombreUsuario')?.errors?.['required']">Este campo es requerido</p>
+        <p style="color: rgb(230, 70, 70);" *ngIf="loginForm.get('nombreUsuario')?.touched && loginForm.get('nombreUsuario')?.errors?.['required']">This field is required</p>
         <div class="form-group">
             <label for="password"><i class="fa fa-lock"></i> Password</label>
-            <input formControlName="password" class="form-input" type="password" id="password" name="password" placeholder="Ingrese aquí su contraseña">
+            <input formControlName="password" class="form-input" type="password" id="password" name="password" placeholder="Insert here your password">
             
         </div>
-        <p style="color: rgb(230, 70, 70);" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']">Este campo es requerido</p>
+        <p style="color: rgb(230, 70, 70);" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']">This field is required</p>
     
         <div class="btn-container-modal">
             <p id="login-description">Only the administrator is able to login in order to modify the website's information.</p>
