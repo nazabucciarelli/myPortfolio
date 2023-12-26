@@ -3,18 +3,18 @@
     <img class="profilepic col-md-6" [src]="persona.img">
     <div class="col-md-6 info-profile">
         <h2 *ngIf="persona.nombre != '' && persona.apellido != ''" id="name">{{persona.nombre}} {{persona.apellido}} <a *ngIf="isLogged" (click)="openDialog()" class="fa fa-pen"></a></h2>
-        <h2  id="name" *ngIf="persona.nombre == '' || persona.apellido == ''">Ingresa tu nombre completo <a (click)="openDialog()" class="fa fa-pen"></a></h2>
+        <h2  id="name" *ngIf="persona.nombre == '' || persona.apellido == ''">Insert your name<a (click)="openDialog()" class="fa fa-pen"></a></h2>
         <h4 id="position">{{persona.profesion}}</h4>
-        <p *ngIf="persona.profesion == '' ">Ingresa tu profesión</p>
-        <a [href]="persona.urlcv" target="_blank" class="btn btn-secondary">Ver CV</a>
+        <p *ngIf="persona.profesion == '' ">Insert your profession</p>
+        <a [href]="persona.urlcv" target="_blank" class="btn btn-secondary">View CV</a>
     </div>
 </div>
     <div class="container-fluid about">
         <div class="container">
-            <h2 class="title-section header">Acerca de
+            <h2 class="title-section header">About me
                 
             </h2>
-            <p class="no-info-message" *ngIf="persona.sobremi == ''"> ¡Oops! No hay información sobre ti por aquí...</p>
+            <p class="no-info-message" *ngIf="persona.sobremi == ''"> ¡Oops! There is no information about you over here...</p>
 
             <p>{{persona.sobremi}}</p>
         </div>

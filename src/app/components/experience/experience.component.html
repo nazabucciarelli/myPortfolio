@@ -1,9 +1,9 @@
 
 <div class="container-fluid info-section">
     <div class="container">
-        <h2 class="title-section header">Experiencia <a *ngIf="isLogged" (click)="openDialog()" type="button"><i class="fa fa-plus"></i></a></h2>
+        <h2 class="title-section header">Experience <a *ngIf="isLogged" (click)="openDialog()" type="button"><i class="fa fa-plus"></i></a></h2>
         <div *ngIf="experiencia[0] == null" class="no-info-message">
-            <p>¡Oops! No hay información sobre tu experiencia por aquí...</p>
+            <p>¡Oops! There is no information about your experience over here...</p>
         </div>
         <div class="row" *ngFor="let exp of experiencia">
             <div class="col-sm-6 col-lg-2 img">

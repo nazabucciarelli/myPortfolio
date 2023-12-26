@@ -1,9 +1,6 @@
 <nav class="navbar container-fluid row"> 
-    <div class="container col-sm-1">
-        <img src="https://desa.argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1660276176/APLogo-20-20.png" class="logo rounded float-start" >
-    </div>  
     
-    <div class="container-fluid col-sm-11 ">
+    <div class="container-fluid col-sm-12">
         <ol class="socials">
             <i *ngIf="isLogged" (click)="openEditLinksDialog()" title="Editar enlaces" class="fa fa-link edit-button"></i>
             <a *ngIf="header.urlig != null" [href]="header.urlig" target="_blank"><i class="fa fa-instagram"></i></a>
